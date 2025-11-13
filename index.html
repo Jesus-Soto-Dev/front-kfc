@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC-FRONT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid justify-content-between">
+
+                <a class="navbar-brand" href="#">
+                    <img src="img/kfc-logo.svg" alt="Bootstrap" width="120" height="96">
+                </a>
+                <!-- Menú hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Nuestra carta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Cupones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Encuentra tu KFC</a></li>
+                    </ul>
+                </div>
+
+                <!-- Íconos a la derecha -->
+                <div class="navbar-icons d-flex align-items-center">
+                <img src="img/preLogin-icon.svg" alt="Usuario" width="60" height="48" class="me-3">
+                <img src="img/sprite_bucket.png" alt="Carrito" width="60" height="48" class="me-3">
+
+                <!-- Dropdown del menú -->
+                <div class="dropdown">
+                    <button class="btn btn-light border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="img/icon-menu.svg" alt="Menú" width="40" height="32">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Promociones</a></li>
+                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
