@@ -14,82 +14,109 @@
 
 <div class="container"> 
     <h2 class="fw-bold text-uppercase title-form">Datos de contacto</h2>
-    <form action="" class="row row-cols-1">
+    <form action="" class="row row-cols-1 
+    row-cols-lg-2">
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="tel" 
                     name="telefono-movil" 
                     id="telefono-movil" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" " 
+                    required>
                 <label for="telefono-movil" class="label-form">Teléfono móvil*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu numero de telefono movil
+                </div>
             </div>
         </div>
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="tel" 
                     name="telefono-fijo" 
                     id="telefono-fijo" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" "
+                    required>
                 <label for="telefono-fijo">Teléfono fijo*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu numero de telefono fijo
+                </div>
             </div>
         </div>
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="email" 
                     name="correo-electronico" 
                     id="correo-electronico" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" "
+                    required>
                 <label for="correo-electronico">Correo electrónico*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu correo electronico 
+                </div>
             </div>
         </div>
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="text" 
                     name="perfil-linkedin" 
                     id="perfil-linkedin" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" "
+                    required>
                 <label for="perfil-linkedin">Perfil de LinkedIn*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu perfil de LinkedIn
+                </div>
             </div>
         </div>
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="text" 
                     name="perfil-twitter" 
                     id="perfil-twitter" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" "
+                    required>
                 <label for="perfil-twitter">Perfil de Twitter*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu perfil de Twitter
+                </div>
             </div>
         </div>
 
-        <div class="col d-flex flex-column m-4">
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
             <div class="form-floating floating-bottom">
                 <input 
                     type="text" 
                     name="sitio-web" 
                     id="sitio-web" 
                     class="form-control" 
-                    placeholder=" ">
+                    placeholder=" "
+                    required>
                 <label for="sitio-web">Sitio web profesional*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu sitio web profesional
+                </div>
             </div>
         </div>
 
     </form>
 </div>
+
+<script src="js/main.js"></script>
   
 </body>
 </html>

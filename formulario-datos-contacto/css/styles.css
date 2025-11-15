@@ -49,7 +49,7 @@
     opacity: 1;         
     font-size: 14px;   
 }
-/* Borde solo abajo en todos los floating inputs */
+
 .floating-bottom .form-control {
     border: none;
     border-bottom: 1px solid black;
@@ -57,19 +57,18 @@
     box-shadow: none;
 }
 
-/* Label inicial (parece placeholder) */
+
 .floating-bottom label {
-    color: black;         /* color del placeholder */  
-    font-size: 14px;       /* tamaño del texto */
+    color: black;        
+    font-size: 1rem;      
     transition: all 0.2s ease-in-out;
     font-weight: 100;
-    font-family: 'Helvetica', Arial, Helvetica, sans-serif; 
-    font-size: 1rem;
+    font-family: Helvetica, 'Oswald'; 
 }
 
 /* Label flotante al hacer focus o escribir */
 .floating-bottom .form-control:focus ~ label,
 .floating-bottom .form-control:not(:placeholder-shown) ~ label {
-    transform: translateY(-1.0rem) scale(.85); /* ajusta la posición */
-    color: black;         /* color cuando flota */
+    transform: translateY(-1.0rem) scale(.85); 
+    color: black;         
 }
