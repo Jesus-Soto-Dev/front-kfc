@@ -150,6 +150,7 @@
   z-index: 999;
   top: 4rem;
   border-radius: 8px;
+  font-family: Helvetica, 'Oswald';
 }
 
 .custom-select-options li {
@@ -161,8 +162,10 @@
   background: #e7e7e7;
 }
 
-
-
+.font-cuenta {
+    font-family: Helvetica, 'Oswald';
+    color:#000;
+}
 
 @media (min-width: 992px) {
     .title-form {
