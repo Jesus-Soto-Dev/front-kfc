@@ -52,3 +52,41 @@
         });
     });
 })();
+
+const trigger = document.querySelector(".custom-select-trigger");
+const optionsMenu = document.querySelector(".custom-select-options");
+const hiddenInput = document.getElementById("tipo-cuenta");
+
+trigger.addEventListener("click", () => {
+  const isVisible = optionsMenu.style.display === "block";
+  optionsMenu.style.display = isVisible ? "none" : "block";
+});
+
+optionsMenu.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    trigger.textContent = e.target.textContent;
+    hiddenInput.value = e.target.dataset.value;
+    optionsMenu.style.display = "none";
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".custom-select-container")) {
+    optionsMenu.style.display = "none";
+  }
+});
+
+  const container = document.querySelector('.custom-select-container');
+  const caret = container.querySelector('.bi-caret-down-fill');
+  const options = container.querySelector('.custom-select-options');
+
+  caret.addEventListener('click', () => {
+    options.style.display = options.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Cerrar si haces click fuera
+  document.addEventListener('click', (e) => {
+    if (!container.contains(e.target)) {
+      options.style.display = 'none';
+    }
+  });
