@@ -1,0 +1,74 @@
+/*FUENTES*/
+
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'HelveticaCustom';
+    src: url('../fonts/Helvetica-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'HelveticaCustom';
+    src: url('../fonts/Helvetica-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*FIN FUENTES*/ 
+
+.title-form {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 78px;
+}
+
+.input-border {
+    border-bottom: solid black 1px; 
+    border-radius: 0%;
+}
+
+.input-border::placeholder {
+    color: #000;       
+    opacity: 1;         
+    font-size: 14px;   
+}
+
+.floating-bottom .form-control {
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+.floating-bottom label {
+    color: black;        
+    font-size: 1rem;      
+    transition: all 0.2s ease-in-out;
+    font-weight: 100;
+    font-family: Helvetica, 'Oswald'; 
+}
+
+/* Label flotante al hacer focus o escribir */
+.floating-bottom .form-control:focus ~ label,
+.floating-bottom .form-control:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.0rem) scale(.85); 
+    color: black;         
+}
