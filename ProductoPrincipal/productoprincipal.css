@@ -1,0 +1,16 @@
+.Producto-principal .card {
+    background-color: #dc3545;
+    color: white; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.Producto-principal .card:hover {
+    border-color: red;
+    background-color: white;
+    color: #dc3545; 
+}
+
