@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="formulario-datos-contacto/css/styles.css">
 </head>
 
 <body>
@@ -56,6 +57,111 @@
         </nav>
     </header>
 
+    <div class="container"> 
+    <h2 class="fw-bold text-uppercase title-form">Datos de contacto</h2>
+    <form action="" class="row row-cols-1 
+    row-cols-lg-2">
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="tel" 
+                    name="telefono-movil" 
+                    id="telefono-movil" 
+                    class="form-control" 
+                    placeholder=" " 
+                    required>
+                <label for="telefono-movil" class="label-form">Teléfono móvil*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu numero de telefono movil
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="tel" 
+                    name="telefono-fijo" 
+                    id="telefono-fijo" 
+                    class="form-control" 
+                    placeholder=" "
+                    required>
+                <label for="telefono-fijo">Teléfono fijo*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu numero de telefono fijo
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="email" 
+                    name="correo-electronico" 
+                    id="correo-electronico" 
+                    class="form-control" 
+                    placeholder=" "
+                    required>
+                <label for="correo-electronico">Correo electrónico*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu correo electronico 
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="text" 
+                    name="perfil-linkedin" 
+                    id="perfil-linkedin" 
+                    class="form-control" 
+                    placeholder=" "
+                    required>
+                <label for="perfil-linkedin">Perfil de LinkedIn*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu perfil de LinkedIn
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="text" 
+                    name="perfil-twitter" 
+                    id="perfil-twitter" 
+                    class="form-control" 
+                    placeholder=" "
+                    required>
+                <label for="perfil-twitter">Perfil de Twitter*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu perfil de Twitter
+                </div>
+            </div>
+        </div>
+
+        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+            <div class="form-floating floating-bottom">
+                <input 
+                    type="text" 
+                    name="sitio-web" 
+                    id="sitio-web" 
+                    class="form-control" 
+                    placeholder=" "
+                    required>
+                <label for="sitio-web">Sitio web profesional*</label>
+                <div class="invalid-feedback">
+                        Ingresa tu sitio web profesional
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script src="formulario-datos-contacto/js/main.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
