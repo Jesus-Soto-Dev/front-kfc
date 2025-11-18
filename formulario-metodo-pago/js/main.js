@@ -71,10 +71,18 @@
     const hiddenInput = document.getElementById("tipo-cuenta");
     const customSelectContainer = document.querySelector('.custom-select-container');
 
+    // Abrir/ocultar al hacer clic en el trigger
     trigger.addEventListener("click", () => {
         optionsMenu.style.display = optionsMenu.style.display === "block" ? "none" : "block";
     });
 
+    // Abrir al hacer clic en el <i>
+    const icon = document.querySelector(".label-with-icon i");
+    icon.addEventListener("click", () => {
+        trigger.click();
+    });
+
+    // Seleccionar opción
     optionsMenu.addEventListener("click", (e) => {
         if (e.target.tagName === "LI") {
             trigger.textContent = e.target.textContent;
@@ -84,6 +92,7 @@
         }
     });
 
+    // Cerrar dropdown si se hace clic fuera
     document.addEventListener("click", (e) => {
         if (!customSelectContainer.contains(e.target)) {
             optionsMenu.style.display = "none";

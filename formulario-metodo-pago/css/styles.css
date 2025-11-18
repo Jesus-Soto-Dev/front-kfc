@@ -167,6 +167,10 @@
     color:#000;
 }
 
+.label-bi {
+    cursor: pointer;
+}
+
 @media (min-width: 992px) {
     .title-form {
     font-size: 4rem;
