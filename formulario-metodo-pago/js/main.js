@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    const form = document.querySelector('form');
+    const forms = document.querySelectorAll('form');
     const inputs = form.querySelectorAll('input');
 
     function validarInput(input) {
@@ -56,10 +56,13 @@
     }
 
     // Validación en tiempo real
-    inputs.forEach(input => {
-        input.addEventListener('input', () => input.classList.remove('is-invalid'));
-        input.addEventListener('focus', () => input.classList.remove('is-invalid'));
-        input.addEventListener('blur', () => validarInput(input));
+    forms.forEach(form => {
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('input', () => input.classList.remove('is-invalid'));
+            input.addEventListener('focus', () => input.classList.remove('is-invalid'));
+            input.addEventListener('blur', () => validarInput(input)); 
+        });
     });
 
     // Dropdown personalizado
