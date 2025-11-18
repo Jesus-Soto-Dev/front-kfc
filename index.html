@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="formulario-datos-contacto/css/styles.css">
     <link rel="stylesheet" href="ProductoPrincipal/productoprincipal.css">
+    <link rel="stylesheet" href="formulario-metodo-pago/css/styles.css">
 </head>
 
 <body>
@@ -70,14 +71,13 @@
 
             <section class="forms col-lg-6">
                 <!-- Formulario Datos de Contacto -->
-                <div class="container">
+                <div class="container-fluid">
                     <h2 class="fw-bold text-uppercase title-form">Datos de contacto</h2>
-                    <form action="" class="row row-cols-1 row-cols-lg-2">
-
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                    <form action="" class="row m-0 row-cols-1 row-cols-md-2 row-cols-lg-1">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="tel" name="telefono-movil" id="telefono-movil" class="form-control"
-                                    placeholder=" " required>
+                                    placeholder=" " novalidate>
                                 <label for="telefono-movil" class="label-form">Teléfono móvil*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu numero de telefono movil
@@ -85,10 +85,10 @@
                             </div>
                         </div>
 
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="tel" name="telefono-fijo" id="telefono-fijo" class="form-control"
-                                    placeholder=" " required>
+                                    placeholder=" " novalidate>
                                 <label for="telefono-fijo">Teléfono fijo*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu numero de telefono fijo
@@ -96,10 +96,10 @@
                             </div>
                         </div>
 
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="email" name="correo-electronico" id="correo-electronico"
-                                    class="form-control" placeholder=" " required>
+                                    class="form-control" placeholder=" " novalidate>
                                 <label for="correo-electronico">Correo electrónico*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu correo electronico
@@ -107,10 +107,10 @@
                             </div>
                         </div>
 
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="text" name="perfil-linkedin" id="perfil-linkedin" class="form-control"
-                                    placeholder=" " required>
+                                    placeholder=" " novalidate>
                                 <label for="perfil-linkedin">Perfil de LinkedIn*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu perfil de LinkedIn
@@ -118,10 +118,10 @@
                             </div>
                         </div>
 
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="text" name="perfil-twitter" id="perfil-twitter" class="form-control"
-                                    placeholder=" " required>
+                                    placeholder=" " novalidate>
                                 <label for="perfil-twitter">Perfil de Twitter*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu perfil de Twitter
@@ -129,17 +129,16 @@
                             </div>
                         </div>
 
-                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                        <div class="col d-flex flex-column m-4 m-md-0 my-lg-5">
                             <div class="form-floating floating-bottom">
                                 <input type="text" name="sitio-web" id="sitio-web" class="form-control" placeholder=" "
-                                    required>
+                                    novalidate>
                                 <label for="sitio-web">Sitio web profesional*</label>
                                 <div class="invalid-feedback">
                                     Ingresa tu sitio web profesional
                                 </div>
                             </div>
                         </div>
-
                     </form>
                 </div>
 
@@ -171,6 +170,74 @@
                             Por favor elija un producto.
                         </div>
                     </div>
+
+                    <!-- Formulario datos bancarios -->
+                    <div class="container">
+                        <h2 class="fw-bold text-uppercase title-form">Datos bancarios</h2>
+                        <form action="" class="row row-cols-1 row-cols-md-3 row-cols-lg-1">
+
+                            <div class="col d-flex flex-column m-4  my-lg-5">
+                                <div class="form-floating floating-bottom">
+                                    <input type="text" name="nombre-banco" id="nombre-banco" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="sitio-web">Nombre del banco *</label>
+                                    <div class="invalid-feedback">
+                                        Ingresa el nombre del banco
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col d-flex flex-column m-4  my-lg-5">
+                                <div class="form-floating floating-bottom">
+                                    <input type="text" name="numero-iban" id="numero-iban" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="sitio-web">Numero de cuenta (IBAN) *</label>
+                                    <div class="invalid-feedback">
+                                        Ingresa el IBAN
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col d-flex flex-column m-4  my-lg-5">
+                                <div class="form-floating floating-bottom">
+                                    <input type="text" name="swift-bic" id="swift-bic" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="sitio-web">Swift/BIC*</label>
+                                    <div class="invalid-feedback">
+                                        Ingresa el Swift/BIC
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col d-flex flex-column mx-4  my-lg-5 custom-select-container">
+                                <div class="label-with-icon d-flex flex-column align-items-start">
+                                    <label class="text-start font-cuenta">Tipo de cuenta *</label>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </div>
+
+                                <div class="custom-select-trigger"></div>
+                                <ul class="custom-select-options">
+                                    <li data-value="Corriente">Corriente</li>
+                                    <li data-value="Ahorro">Ahorro</li>
+                                </ul>
+
+                                <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+                            </div>
+
+                            <div class="col d-flex flex-column mx-4  my-lg-1">
+                                <div class="form-floating floating-bottom">
+                                    <input type="text" name="sucursal" id="sucursal" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="sucursal">Sucursal *</label>
+                                    <div class="invalid-feedback">
+                                        Ingresa la sucursal
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
             </section>
 
         </div>
@@ -181,6 +248,7 @@
 
     <script src="formulario-datos-contacto/js/main.js"></script>
     <script src="ProductoPrincipal/productoprincipal.js"></script>
+    <script src="formulario-metodo-pago/js/main.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
