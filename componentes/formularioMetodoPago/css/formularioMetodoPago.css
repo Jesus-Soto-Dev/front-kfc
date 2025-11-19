@@ -83,5 +83,5 @@
 
 .title-form {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
-    font-size: 78px;
+    font-size: clamp(2rem, 4vw + 1rem, 4.8rem);
 }

@@ -12,13 +12,17 @@
 </head>
 <body>
 
-<div class="container direccion-container">
-    <h2 class="fw-bold text-uppercase title-form">Dirección</h2>
+<div class="container d-flex flex-column align-items-center align-items-lg-end ms-lg-auto direccion-container">
+    <h2 class="fw-bold text-uppercase title-form 
+           text-center text-lg-end
+           fs-2 fs-md-1 fs-lg-display-6 fs-xl-display-5">Datos de Dirección</h2>
 
-    <form id="form-direccion" class="row row-cols-1 row-cols-lg-2 row-cols-lg-1">
+    <form id="form-direccion" class="row row-cols-1 row-cols-md-2 row-cols-xl-1 g-4">
 
         <!-- Tipo de vía -->
-        <div class="col">
+
+        <div class="col d-flex flex-column px-3 px-lg-0">
+            
             <div class="form-floating floating-bottom">
                 <select id="tipo-via" name="tipo-via" class="form-select" required>
                     <option value="" selected></option>
@@ -34,7 +38,7 @@
         </div>
 
         <!-- Vía -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="via" name="via" class="form-control" placeholder=" " required>
                 <label for="via">Vía*</label>
@@ -43,7 +47,7 @@
         </div>
 
         <!-- Número -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="numero" name="numero" class="form-control" placeholder=" " required>
                 <label for="numero">Número*</label>
@@ -52,7 +56,7 @@
         </div>
 
         <!-- Piso -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="piso" name="piso" class="form-control" placeholder=" ">
                 <label for="piso">Piso</label>
@@ -60,7 +64,7 @@
         </div>
 
         <!-- Puerta -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" ">
                 <label for="puerta">Puerta</label>
@@ -68,7 +72,7 @@
         </div>
 
         <!-- Tipo de vivienda -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <select id="tipo-vivienda" name="tipo-vivienda" class="form-select" required>
                     <option value="" selected></option>
@@ -76,13 +80,13 @@
                     <option>Piso</option>
                     <option>Edificio</option>
                 </select>
-                <label for="tipo-via">Tipo de vía*</label>
-                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                <label for="tipo-vivienda">Tipo de vivienda*</label>
+                <div class="invalid-feedback">Selecciona el tipo de vivienda</div>
             </div>
         </div>
 
         <!-- Código postal -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="cp" name="cp" class="form-control" placeholder=" " required>
                 <label for="cp">Código postal*</label>
@@ -91,7 +95,7 @@
         </div>
 
         <!-- Provincia -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <select id="provicia" name="provincia" class="form-select" required>
                     <option value="" selected></option>
@@ -99,13 +103,13 @@
                     <option>Soria</option>
                     <option>Segovia</option>
                 </select>
-                <label for="tipo-via">Tipo de vía*</label>
-                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                <label for="provincia">Provincia*</label>
+                <div class="invalid-feedback">Selecciona la provincia</div>
             </div>
         </div>
 
         <!-- Localidad -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="localidad" name="localidad" class="form-control" placeholder=" " required>
                 <label for="localidad">Localidad*</label>
@@ -114,7 +118,7 @@
         </div>
 
         <!-- País -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <select id="pais" name="pais" class="form-select" required>
                     <option value="" selected></option>

@@ -12,13 +12,16 @@
 </head>
 <body>
 
-<div class="container metodo-container">
-    <h2 class="fw-bold text-uppercase title-form">Método de Pago</h2>
+<div class="container d-flex flex-column align-items-center align-items-lg-end ms-lg-auto datos-container">
 
-    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1">
+    <h2 class="fw-bold text-uppercase title-form 
+           text-center text-lg-end
+           fs-2 fs-md-1 fs-lg-display-6 fs-xl-display-5">Método de Pago</h2>
+
+    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-xl-1 g-4">
 
         <!-- Tipo de pago -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <select id="tipo-pago" name="tipo-pago" class="form-select" required>
                     <option value="" selected></option>
@@ -32,7 +35,7 @@
         </div>
 
         <!-- Nombre titular -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="titular" name="titular" class="form-control" placeholder=" " required>
                 <label for="titular">Nombre del titular*</label>
@@ -40,7 +43,7 @@
             </div>
         </div>
 
-        <div class="col d-flex flex-row gap-5 m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <label for="titular">Fecha de Caducidad*</label>
 
             <!-- Mes --> <!-- Año -->
@@ -71,7 +74,7 @@
             </div>
         </div>
         <!-- CVV -->
-        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+        <div class="col d-flex flex-column px-3 px-lg-0">
             <div class="form-floating floating-bottom">
                 <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
                 <label for="cvv">CVV*</label>
