@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="ProductoPrincipal/productoprincipal.css">
     <link rel="stylesheet" href="formulario-metodo-pago/css/styles.css">
     <link rel="stylesheet" href="ProductosSecundario/css/psecundario.css">
+    <link rel="stylesheet" href="componentes/formularioDireccion/css/formularioDireccion.css">
+    <link rel="stylesheet" href="componentes/formularioMetodoPago/css/formularioMetodoPago.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -144,6 +146,126 @@
                     </form>
                 </div>
 
+                <!-- Formulario Direccion-->
+                <div class="container direccion-container">
+                    <h2 class="fw-bold text-uppercase title-form">Dirección</h2>
+
+                    <form id="form-direccion" class="row row-cols-1 row-cols-lg-2 row-cols-lg-1">
+                        <!-- Tipo de vía -->
+                        <div class="col">
+                            <div class="form-floating floating-bottom">
+                                <select id="tipo-via" name="tipo-via" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Calle</option>
+                                    <option>Avenida</option>
+                                    <option>Paseo</option>
+                                    <option>Camino</option>
+                                    <option>Plaza</option>
+                                </select>
+                                <label for="tipo-via">Tipo de vía*</label>
+                                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                            </div>
+                        </div>
+
+                        <!-- Vía -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="via" name="via" class="form-control" placeholder=" " required>
+                                <label for="via">Vía*</label>
+                                <div class="invalid-feedback">Introduce la vía</div>
+                            </div>
+                        </div>
+
+                        <!-- Número -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="numero" name="numero" class="form-control" placeholder=" "
+                                    required>
+                                <label for="numero">Número*</label>
+                                <div class="invalid-feedback">Introduce el número</div>
+                            </div>
+                        </div>
+
+                        <!-- Piso -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="piso" name="piso" class="form-control" placeholder=" ">
+                                <label for="piso">Piso</label>
+                            </div>
+                        </div>
+
+                        <!-- Puerta -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" ">
+                                <label for="puerta">Puerta</label>
+                            </div>
+                        </div>
+
+                        <!-- Tipo de vivienda -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <select id="tipo-vivienda" name="tipo-vivienda" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Chalet</option>
+                                    <option>Piso</option>
+                                    <option>Edificio</option>
+                                </select>
+                                <label for="tipo-via">Tipo de vía*</label>
+                                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                            </div>
+                        </div>
+
+                        <!-- Código postal -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="cp" name="cp" class="form-control" placeholder=" " required>
+                                <label for="cp">Código postal*</label>
+                                <div class="invalid-feedback">Introduce el código postal</div>
+                            </div>
+                        </div>
+
+                        <!-- Provincia -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <select id="provicia" name="provincia" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Salamanca</option>
+                                    <option>Soria</option>
+                                    <option>Segovia</option>
+                                </select>
+                                <label for="tipo-via">Tipo de vía*</label>
+                                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                            </div>
+                        </div>
+
+                        <!-- Localidad -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="localidad" name="localidad" class="form-control" placeholder=" "
+                                    required>
+                                <label for="localidad">Localidad*</label>
+                                <div class="invalid-feedback">Introduce la localidad</div>
+                            </div>
+                        </div>
+
+                        <!-- País -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <select id="pais" name="pais" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>España</option>
+                                    <option>Portugal</option>
+                                    <option>Francia</option>
+                                </select>
+                                <label for="pais">País*</label>
+                                <div class="invalid-feedback">Selecciona un país</div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
                 <!-- Formulario productos principales -->
                 <div class="Producto-principal ">
                     <h2 class="fw-bold text-uppercase title-form">Producto principal</h2>
@@ -199,6 +321,86 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Formulario método de pago -->
+                <div class="container metodo-container">
+                    <h2 class="fw-bold text-uppercase title-form">Método de Pago</h2>
+                    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1">
+                        <!-- Tipo de pago -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <select id="tipo-pago" name="tipo-pago" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Tarjeta</option>
+                                    <option>Transferencia</option>
+                                    <option>PayPal</option>
+                                </select>
+                                <label for="tipo-pago">Método de pago*</label>
+                                <div class="invalid-feedback">Selecciona un método</div>
+                            </div>
+                        </div>
+
+                        <!-- Nombre titular -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="titular" name="titular" class="form-control" placeholder=" "
+                                    required>
+                                <label for="titular">Nombre del titular*</label>
+                                <div class="invalid-feedback">Introduce el titular</div>
+                            </div>
+                        </div>
+
+                        <div class="col d-flex flex-row gap-5 m-4 m-lg-0 my-lg-5">
+                            <label for="titular">Fecha de Caducidad*</label>
+
+                            <!-- Mes --> <!-- Año -->
+                            <div class="col-6 form-floating floating-bottom d-flex flex-row gap-3">
+                                <div class="col-6">
+                                    <select id="mes" name="mes" class="form-select" required>
+                                        <option value="" disabled selected>Mes*</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <!-- <label for="mes">Mes*</label>-->
+                                    <div class="invalid-feedback">Selecciona un mes</div>
+                                </div>
+
+                                <div class="col-6">
+                                    <select id="anio" name="anio" class="form-select" required>
+                                        <option value="" disabled selected>Año*</option>
+                                        <option>2025</option>
+                                        <option>2026</option>
+                                        <option>2027</option>
+                                        <option>2028</option>
+                                    </select>
+                                    <!--<label for="anio">Año*</label>-->
+                                    <div class="invalid-feedback">Selecciona un año</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CVV -->
+                        <div class="col d-flex flex-column m-4 m-lg-0 my-lg-5">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
+                                <label for="cvv">CVV*</label>
+                                <div class="invalid-feedback">CVV no válido</div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
 
                 <!-- Formulario datos bancarios -->
                 <div class="container">
@@ -276,6 +478,7 @@
 
 
     <!--  <script src="formulario-datos-contacto/js/main.js"></script>-->
+    <script src="componentes/formularioDireccion/js/formularioDireccion.js"></script>
     <script src="ProductoPrincipal/productoprincipal.js"></script>
     <script src="formulario-metodo-pago/js/main.js"></script>
 
