@@ -37,13 +37,18 @@
 .is-invalid ~ .invalid-feedback {
     display: block;
 }
-
 /* SELECT estilo */
-.form-select {
-    background-color: transparent;
-    background-image: none;
-    padding-left: 0;
+.floating-bottom .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M3.204 5h9.592L8 10.481 3.204 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+
+    background-position: left 0.4rem bottom 0.8rem;
+
+    background-size: 1rem;
+    padding-left: 1.8rem; /* para que el texto no se solape con la flecha */
 }
+
+
 
 /*FUENTES*/
 
@@ -83,6 +88,7 @@
 
 .title-form {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
-    font-size: clamp(2rem, 4vw + 1rem, 4.8rem);
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
