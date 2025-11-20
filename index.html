@@ -222,6 +222,7 @@
                 </div>
 
 
+
                 <!-- Formulario Datos de Contacto -->
                 <div class="container-fluid">
                     <h2 class="fw-bold text-uppercase title-form">Datos de contacto</h2>
@@ -295,9 +296,9 @@
                 </div>
 
                 <!-- Formulario Direccion-->
+
                 <div class="container d-flex flex-column align-items-start ms-auto datos-container direccion-container">
-                    <h2 class="fw-bold text-uppercase title-form 
-           text-start">Datos de Dirección</h2>
+                    <h2 class="fw-bold text-uppercase title-form text-start">Datos de Dirección</h2>
 
                     <form id="form-direccion" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
@@ -341,16 +342,19 @@
                         <!-- Piso -->
                         <div class="col d-flex flex-column px-3 px-lg-0">
                             <div class="form-floating floating-bottom">
-                                <input type="text" id="piso" name="piso" class="form-control" placeholder=" ">
-                                <label for="piso">Piso</label>
+                                <input type="text" id="piso" name="piso" class="form-control" placeholder=" " required>
+                                <label for="piso">Piso*</label>
+                                <div class="invalid-feedback">Introduce el Piso</div>
                             </div>
                         </div>
 
                         <!-- Puerta -->
                         <div class="col d-flex flex-column px-3 px-lg-0">
                             <div class="form-floating floating-bottom">
-                                <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" ">
-                                <label for="puerta">Puerta</label>
+                                <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" "
+                                    required>
+                                <label for="puerta">Puerta*</label>
+                                <div class="invalid-feedback">Introduce la Puerta</div>
                             </div>
                         </div>
 
@@ -514,7 +518,7 @@
 
                                 <div class="form-floating floating-bottom flex-fill col-4">
                                     <select id="mes" name="mes" class="form-select" required>
-                                        <option value="" disabled selected>Mes*</option>
+                                        <option value="" disabled selected></option>
                                         <option>01</option>
                                         <option>02</option>
                                         <option>03</option>
@@ -528,19 +532,20 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
-                                    <!-- <label for="mes">Mes*</label>-->
+
+                                    <label for="mes">Mes*</label>
                                     <div class="invalid-feedback">Selecciona un mes</div>
                                 </div>
 
                                 <div class="form-floating floating-bottom flex-fill col-4">
                                     <select id="anio" name="anio" class="form-select" required>
-                                        <option value="" disabled selected>Año*</option>
+                                        <option value="" disabled selected></option>
                                         <option>2025</option>
                                         <option>2026</option>
                                         <option>2027</option>
                                         <option>2028</option>
                                     </select>
-                                    <!--<label for="anio">Año*</label>-->
+                                    <label for="anio">Año*</label>
                                     <div class="invalid-feedback">Selecciona un año</div>
                                 </div>
                             </div>
