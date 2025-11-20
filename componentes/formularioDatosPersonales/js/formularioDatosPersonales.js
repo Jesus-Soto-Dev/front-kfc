@@ -1,31 +1,44 @@
 (function () {
     'use strict';
 
-    const form = document.getElementById("form-pago");
+    const form = document.getElementById("form-personales");
     const inputs = form.querySelectorAll("input, select");
 
-    function validar(input) {
+    // --- RELLENAR DÍAS ---
+    const diaSelect = document.getElementById("dia");
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        diaSelect.appendChild(option);
+    }
+
+    // --- RELLENAR AÑOS ---
+    const anoSelect = document.getElementById("ano");
+    const currentYear = new Date().getFullYear();
+
+    for (let i = 0; i < 100; i++) {
+        const year = currentYear - i;
+        const option = document.createElement("option");
+        option.value = year;
+        option.textContent = year;
+        anoSelect.appendChild(option);
+    }
+
+
+    function validarInput(input) {
         input.classList.remove("is-invalid");
+
         const value = input.value.trim();
 
+        // Requeridos
         if (input.hasAttribute("required") && !value) {
-            input.classList.add("is-invalid");
-            return false;
-        }
-
-        if (input.id === "tarjeta" && !/^\d{16}$/.test(value)) {
-            input.classList.add("is-invalid");
-            return false;
-        }
-
-        if (input.id === "cvv" && !/^\d{3}$/.test(value)) {
             input.classList.add("is-invalid");
             return false;
         }
 
         return true;
     }
-
 
     inputs.forEach(input => {
          // Quitar el borde rojo cuando empieza a escribir
@@ -43,3 +56,4 @@
         });
     });
 })();
+/* */
