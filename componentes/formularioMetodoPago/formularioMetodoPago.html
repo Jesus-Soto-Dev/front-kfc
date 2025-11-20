@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Metodo Pago</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -12,13 +12,11 @@
 </head>
 <body>
 
-<div class="container d-flex flex-column align-items-center align-items-lg-end ms-lg-auto datos-container">
+<div class="container d-flex flex-column align-items-start ms-auto datos-container">
 
-    <h2 class="fw-bold text-uppercase title-form 
-           text-center text-lg-end
-           fs-2 fs-md-1 fs-lg-display-6 fs-xl-display-5">Método de Pago</h2>
+    <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
 
-    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-xl-1 g-4">
+    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
         <!-- Tipo de pago -->
         <div class="col d-flex flex-column px-3 px-lg-0">
@@ -44,11 +42,13 @@
         </div>
 
         <div class="col d-flex flex-column px-3 px-lg-0">
-            <label for="titular">Fecha de Caducidad*</label>
-
             <!-- Mes --> <!-- Año -->
-            <div class="col-6 form-floating floating-bottom d-flex flex-row gap-3">
-                <div class="col-6">
+            <div class="d-flex gap-3 fecha-group">
+                <div class="col-4">
+                    <label for="titular">Fecha de Caducidad*</label>
+                </div>
+
+                <div class="form-floating floating-bottom flex-fill col-4">
                     <select id="mes" name="mes" class="form-select" required>
                         <option value="" disabled selected>Mes*</option>
                         <option>01</option><option>02</option><option>03</option>
@@ -60,7 +60,7 @@
                     <div class="invalid-feedback">Selecciona un mes</div>
                 </div>
 
-                <div class="col-6">
+                <div class="form-floating floating-bottom flex-fill col-4">
                     <select id="anio" name="anio" class="form-select" required>
                         <option value="" disabled selected>Año*</option>
                         <option>2025</option>

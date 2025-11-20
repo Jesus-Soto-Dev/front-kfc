@@ -12,13 +12,11 @@
 </head>
 <body>
 
-<div class="container d-flex flex-column align-items-center align-items-lg-end ms-lg-auto datos-container">
+<div class="container d-flex flex-column align-items-start ms-auto datos-container">
     
-    <h2 class="fw-bold text-uppercase title-form 
-           text-center text-lg-end
-           fs-2 fs-md-1 fs-lg-display-6 fs-xl-display-5">Datos personales</h2>
+    <h2 class="fw-bold text-uppercase title-form text-start">Datos personales</h2>
 
-    <form id="form-personales" class="row row-cols-1 row-cols-md-2 row-cols-xl-1 g-4">
+    <form id="form-personales" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
         <!-- Nombre -->
         <div class="col d-flex flex-column px-3 px-lg-0">
@@ -40,12 +38,15 @@
 
         <!-- Fecha nacimiento -->
         <div class="col d-flex flex-column px-3 px-lg-0">
-            <label class="label-group">Fecha de nacimiento *</label>
-
+           
             <div class="d-flex gap-3 fecha-group">
 
+                <div class="col-3">
+                    <label class="label-group">Fecha de nacimiento *</label>
+                </div>
+
                 <!-- Día -->
-                <div class="form-floating floating-bottom flex-fill">
+                <div class="form-floating floating-bottom flex-fill col-3">
                    <select id="dia" name="dia" class="form-select" required>
                         <option value="" selected></option>
                     </select>
@@ -54,7 +55,7 @@
                 </div>
 
                 <!-- Mes -->
-                <div class="form-floating floating-bottom flex-fill">
+                <div class="form-floating floating-bottom flex-fill col-3">
                     <select id="mes" name="mes" class="form-select" required>
                         <option value="" selected></option>
                         <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option>
@@ -66,7 +67,7 @@
                 </div>
 
                 <!-- Año -->
-                <div class="form-floating floating-bottom flex-fill">
+                <div class="form-floating floating-bottom flex-fill col-3">
                     <select id="ano" name="ano" class="form-select" required>
                         <option value="" selected></option>
                     </select>

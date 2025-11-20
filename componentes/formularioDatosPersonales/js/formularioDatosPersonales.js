@@ -26,7 +26,7 @@
     }
 
 
-    function validar(input) {
+    function validarInput(input) {
         input.classList.remove("is-invalid");
 
         const value = input.value.trim();
@@ -41,6 +41,19 @@
     }
 
     inputs.forEach(input => {
-        input.addEventListener("blur", () => validar(input));
+         // Quitar el borde rojo cuando empieza a escribir
+        input.addEventListener('input', () => {
+            input.classList.remove('is-invalid');
+        });
+        
+        // O cuando hace foco en el campo
+        input.addEventListener('focus', () => {
+            input.classList.remove('is-invalid');
+        });
+        
+        input.addEventListener('blur', () => {
+            validarInput(input); 
+        });
     });
 })();
+/* */
