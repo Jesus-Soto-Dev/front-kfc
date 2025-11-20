@@ -74,6 +74,153 @@
             </section>
 
             <section class="forms col-lg-6">
+
+                <!-- Formulario Datos de Personales -->
+                <div class="container d-flex flex-column align-items-start ms-auto datos-container">
+
+                    <h2 class="fw-bold text-uppercase title-form text-start">Datos personales</h2>
+
+                    <form id="form-personales" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
+
+                        <!-- Nombre -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder=" "
+                                    required>
+                                <label for="nombre">Nombre *</label>
+                                <div class="invalid-feedback">Introduce tu nombre</div>
+                            </div>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder=" "
+                                    required>
+                                <label for="apellidos">Apellidos *</label>
+                                <div class="invalid-feedback">Introduce tus apellidos</div>
+                            </div>
+                        </div>
+
+                        <!-- Fecha nacimiento -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+
+                            <div class="d-flex gap-3 fecha-group">
+
+                                <div class="col-3">
+                                    <label class="label-group">Fecha de nacimiento *</label>
+                                </div>
+
+                                <!-- Día -->
+                                <div class="form-floating floating-bottom flex-fill col-3">
+                                    <select id="dia" name="dia" class="form-select" required>
+                                        <option value="" selected></option>
+                                    </select>
+                                    <label for="dia">Día</label>
+                                    <div class="invalid-feedback">Selecciona un día</div>
+                                </div>
+
+                                <!-- Mes -->
+                                <div class="form-floating floating-bottom flex-fill col-3">
+                                    <select id="mes" name="mes" class="form-select" required>
+                                        <option value="" selected></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <label for="mes">Mes</label>
+                                    <div class="invalid-feedback">Selecciona un mes</div>
+                                </div>
+
+                                <!-- Año -->
+                                <div class="form-floating floating-bottom flex-fill col-3">
+                                    <select id="ano" name="ano" class="form-select" required>
+                                        <option value="" selected></option>
+                                    </select>
+
+                                    <label for="ano">Año</label>
+                                    <div class="invalid-feedback">Selecciona un año</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Género -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <select id="genero" name="genero" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Mujer</option>
+                                    <option>Hombre</option>
+                                    <option>No binario</option>
+                                </select>
+                                <label for="genero">Género *</label>
+                                <div class="invalid-feedback">Selecciona tu género</div>
+                            </div>
+                        </div>
+
+                        <!-- Nacionalidad -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="nacionalidad" name="nacionalidad" class="form-control"
+                                    placeholder=" " required>
+                                <label for="nacionalidad">Nacionalidad *</label>
+                                <div class="invalid-feedback">Introduce tu nacionalidad</div>
+                            </div>
+                        </div>
+
+                        <!-- Tipo identificación -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <select id="tipo-id" name="tipo-id" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>DNI</option>
+                                    <option>NIE</option>
+                                    <option>Pasaporte</option>
+                                </select>
+                                <label for="tipo-id">Tipo identificación *</label>
+                                <div class="invalid-feedback">Selecciona un tipo</div>
+                            </div>
+                        </div>
+
+                        <!-- Número identificación -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="num-id" name="num-id" class="form-control" placeholder=" "
+                                    required>
+                                <label for="num-id">Número de identificación *</label>
+                                <div class="invalid-feedback">Introduce el número</div>
+                            </div>
+                        </div>
+
+                        <!-- Estado civil -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <select id="estado-civil" name="estado-civil" class="form-select" required>
+                                    <option value="" selected></option>
+                                    <option>Soltero/a</option>
+                                    <option>Casado/a</option>
+                                    <option>Divorciado/a</option>
+                                    <option>Viudo/a</option>
+                                </select>
+                                <label for="estado-civil">Estado civil *</label>
+                                <div class="invalid-feedback">Selecciona tu estado civil</div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
                 <!-- Formulario Datos de Contacto -->
                 <div class="container-fluid">
                     <h2 class="fw-bold text-uppercase title-form">Datos de contacto</h2>
