@@ -20,20 +20,24 @@
 
         <!-- Tipo de vía -->
 
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            
-            <div class="form-floating floating-bottom">
-                <select id="tipo-via" name="tipo-via" class="form-select" required>
-                    <option value="" selected></option>
-                    <option>Calle</option>
-                    <option>Avenida</option>
-                    <option>Paseo</option>
-                    <option>Camino</option>
-                    <option>Plaza</option>
-                </select>
-                <label for="tipo-via">Tipo de vía*</label>
-                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+            <div class="label-with-icon d-flex flex-column align-items-start">
+                <label class="text-start font-cuenta">Tipo Via *</label>
+                <i class="bi bi-caret-down-fill label-bi"></i>
             </div>
+
+            <div class="custom-select-trigger"></div>
+            <ul class="custom-select-options">
+                <li data-value="Calle">Calle</li>
+                <li data-value="Avenida">Avenida</li>
+                <li data-value="Paseo">Paseo</li>
+                <li data-value="Camino">Camino</li>
+                <li data-value="Plaza">Plaza</li>
+
+            </ul>
+
+            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+            <div class="invalid-feedback">Selecciona un tipo de via</div>
         </div>
 
         <!-- Vía -->
@@ -74,20 +78,21 @@
 
         <!-- Tipo de vivienda -->
         
-<div class="col d-flex flex-column mx-4  my-lg-5 custom-select-container">
-  <div class="label-with-icon d-flex flex-column align-items-start">
-    <label class="text-start font-cuenta">Tipo vivienda *</label>
-    <i class="bi bi-caret-down-fill label-bi"></i>
-  </div>
+        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+        <div class="label-with-icon d-flex flex-column align-items-start">
+            <label class="text-start font-cuenta">Tipo vivienda *</label>
+            <i class="bi bi-caret-down-fill label-bi"></i>
+        </div>
 
-  <div class="custom-select-trigger"></div>
-  <ul class="custom-select-options">
-    <li data-value="Chalet">Chalet</li>
-    <li data-value="Piso">Piso</li>
-  </ul>
+        <div class="custom-select-trigger"></div>
+        <ul class="custom-select-options">
+            <li data-value="Chalet">Chalet</li>
+            <li data-value="Piso">Piso</li>
+        </ul>
 
-  <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-</div>
+        <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+        <div class="invalid-feedback">Selecciona un tipo de vivienda</div>
+        </div>
 
         <!-- Código postal -->
         <div class="col d-flex flex-column px-3 px-lg-0">
@@ -99,17 +104,21 @@
         </div>
 
         <!-- Provincia -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <select id="provicia" name="provincia" class="form-select" required>
-                    <option value="" selected></option>
-                    <option>Salamanca</option>
-                    <option>Soria</option>
-                    <option>Segovia</option>
-                </select>
-                <label for="provincia">Provincia*</label>
-                <div class="invalid-feedback">Selecciona la provincia</div>
+        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+            <div class="label-with-icon d-flex flex-column align-items-start">
+                <label class="text-start font-cuenta">Provincia *</label>
+                <i class="bi bi-caret-down-fill label-bi"></i>
             </div>
+
+            <div class="custom-select-trigger"></div>
+            <ul class="custom-select-options">
+                <li data-value="Salamanca">Salamanca</li>
+                <li data-value="Soria">Soria</li>
+                <li data-value="Segovia">Segovia</li>
+            </ul>
+
+            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+            <div class="invalid-feedback">Selecciona una provincia</div>
         </div>
 
         <!-- Localidad -->
@@ -122,19 +131,25 @@
         </div>
 
         <!-- País -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <select id="pais" name="pais" class="form-select" required>
-                    <option value="" selected></option>
-                    <option>España</option>
-                    <option>Portugal</option>
-                    <option>Francia</option>
-                </select>
-                <label for="pais">País*</label>
-                <div class="invalid-feedback">Selecciona un país</div>
+
+        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+            <div class="label-with-icon d-flex flex-column align-items-start">
+                <label class="text-start font-cuenta">Pais *</label>
+                <i class="bi bi-caret-down-fill label-bi"></i>
             </div>
+
+            <div class="custom-select-trigger"></div>
+            <ul class="custom-select-options">
+                <li data-value="Francia">Francia</li>
+                <li data-value="España">España</li>
+                <li data-value="Portugal">Portugal</li>
+            </ul>
+
+            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+            <div class="invalid-feedback">Selecciona un pais</div>
         </div>
 
+        
     </form>
 </div>
 
