@@ -38,5 +38,34 @@
             validarInput(input); 
         });
     });
+
+    
+    // Dropdown personalizado
+    const trigger = document.querySelector(".custom-select-trigger");
+    const optionsMenu = document.querySelector(".custom-select-options");
+    const hiddenInput = document.getElementById("tipo-cuenta");
+    const customSelectContainer = document.querySelector('.custom-select-container');
+
+    // Abrir/ocultar al hacer clic en el trigger
+    trigger.addEventListener("click", () => {
+        optionsMenu.style.display = optionsMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Abrir al hacer clic en el <i>
+    const icon = document.querySelector(".label-with-icon i");
+    icon.addEventListener("click", () => {
+        trigger.click();
+    });
+
+    // Seleccionar opción
+    optionsMenu.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+            trigger.textContent = e.target.textContent;
+            hiddenInput.value = e.target.dataset.value;
+            optionsMenu.style.display = "none";
+            hiddenInput.classList.remove('is-invalid');
+        }
+    });
+
 })();
 
