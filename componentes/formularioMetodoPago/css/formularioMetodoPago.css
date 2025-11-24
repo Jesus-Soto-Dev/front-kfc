@@ -15,10 +15,10 @@
     font-family: HelveticaCustom, Arial;
 }
 
-.floating-bottom .form-control:focus ~ label,
-.floating-bottom .form-control:not(:placeholder-shown) ~ label,
-.floating-bottom .form-select:focus ~ label,
-.floating-bottom .form-select:not([value=""]) ~ label {
+.floating-bottom .form-control:focus~label,
+.floating-bottom .form-control:not(:placeholder-shown)~label,
+.floating-bottom .form-select:focus~label,
+.floating-bottom .form-select:not([value=""])~label {
     transform: translateY(-1.0rem) scale(.85);
 }
 
@@ -34,7 +34,7 @@
     margin-top: 0.2rem;
 }
 
-.is-invalid ~ .invalid-feedback {
+.is-invalid~.invalid-feedback {
     display: block;
 }
 
@@ -47,37 +47,25 @@
     background-position: left 0.4rem bottom 0.8rem;
 
     background-size: 1rem;
-    padding-left: 1.8rem; /* para que el texto no se solape con la flecha */
+    padding-left: 1.8rem;
+    /* para que el texto no se solape con la flecha */
 }
 
 .dropdown-select {
-    border: none; 
+    border: none;
 }
 
-.dropdown-select>option:hover {
-    background-color: #e7e7e7;
+.dropdown-select option {
+    background-color: red !important;
+    color: #fff;
 }
 
 .label-with-icon {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
     margin-bottom: 5px;
-}
-
-.label-with-icon label {
-    margin-bottom: 0;
-}
-
-.label-with-icon .bi-caret-down-fill {
-    font-size: 0.9rem;
-    color: #000;
-}
-
-.dropdown-select {
-   appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     border: none;
     outline: none;
     box-shadow: none;
@@ -85,63 +73,60 @@
     padding: 1rem 2rem;
 }
 
-.dropdown-select:focus option {
-    background: transparent;
-    outline: none;
+.label-with-icon .bi-caret-down-fill {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid black;
+    font-size: 0;
+    color: transparent;
+    margin-top: 5px;
 }
 
-/* Quitar todos los bordes del desplegable */
-.dropdown-select,
-.dropdown-select:focus,
-.dropdown-select option,
-.dropdown-select option:focus {
-    outline: none;
-    border: none;
-}
-
-.dropdown-select option {
-    background-color: red !important;
-    color: #fff; 
+.label-with-icon .bi-caret-down-fill::before {
+    content: none;
 }
 
 .custom-select-container {
-  position: relative;
-  width: 20rem;
+    position: relative;
+    width: 20rem;
 }
 
 .custom-select-trigger {
-  padding: 1rem 2rem;
-  cursor: pointer;
-  font-family: Helvetica;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-family: Helvetica;
 }
 
 .custom-select-options {
-  border: solid black 1px;
-  display: none;
-  position: absolute;
-  width: 8rem; 
-  background: white;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  z-index: 999;
-  top: 4rem;
-  border-radius: 8px;
-  font-family: Helvetica, 'Oswald';
+    border: solid black 1px;
+    display: none;
+    position: absolute;
+    width: 8rem;
+    background: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    top: 4rem;
+    border-radius: 8px;
+    font-family: Helvetica, 'Oswald';
 }
 
 .custom-select-options li {
-  padding: 0.8rem 1rem 0.8rem 1rem;
-  cursor: pointer;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    cursor: pointer;
 }
 
 .custom-select-options li:hover {
-  background: #e7e7e7;
+    background: #e7e7e7;
 }
 
 .font-cuenta {
     font-family: Helvetica, 'Oswald';
-    color:#000;
+    color: #000;
 }
 
 .label-bi {
@@ -150,8 +135,8 @@
 
 @media (min-width: 992px) {
     .title-form {
-    font-size: 4rem;
-}
+        font-size: 4rem;
+    }
 }
 
 /*FUENTES*/
@@ -188,7 +173,7 @@
     font-style: normal;
 }
 
-/*FIN FUENTES*/ 
+/*FIN FUENTES*/
 
 .title-form {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
@@ -196,3 +181,18 @@
     font-weight: bold;
 }
 
+.input-border {
+    border-bottom: solid black 1px;
+    border-radius: 0%;
+}
+
+.input-border::placeholder {
+    color: #000;
+    opacity: 1;
+    font-size: 14px;
+}
+
+.datos-container {
+    max-width: 600px;
+    width: 100%;
+}

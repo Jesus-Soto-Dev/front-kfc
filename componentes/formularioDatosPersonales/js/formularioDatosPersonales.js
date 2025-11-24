@@ -4,82 +4,122 @@
     const form = document.getElementById("form-personales");
     const inputs = form.querySelectorAll("input, select");
 
-    // --- RELLENAR DÍAS ---
-    const diaSelect = document.getElementById("dia");
-    for (let i = 1; i <= 31; i++) {
-        const option = document.createElement("option");
-        option.value = i;
-        option.textContent = i;
-        diaSelect.appendChild(option);
-    }
-
-    // --- RELLENAR AÑOS ---
-    const anoSelect = document.getElementById("ano");
-    const currentYear = new Date().getFullYear();
-
-    for (let i = 0; i < 100; i++) {
-        const year = currentYear - i;
-        const option = document.createElement("option");
-        option.value = year;
-        option.textContent = year;
-        anoSelect.appendChild(option);
-    }
-
-
+    // Función de validación
     function validarInput(input) {
+        const value = input.value.trim();
+        let isValid = true;
+
+        // Resetear estado
         input.classList.remove("is-invalid");
 
-        const value = input.value.trim();
-
-        // Requeridos
+        // Validar campos requeridos
         if (input.hasAttribute("required") && !value) {
             input.classList.add("is-invalid");
-            return false;
+            isValid = false;
         }
 
-        return true;
+        return isValid;
     }
 
+    // Event listeners para inputs normales
     inputs.forEach(input => {
-         // Quitar el borde rojo cuando empieza a escribir
+        if (input.type === 'hidden') return; // Los hidden se manejan en los dropdowns
+
         input.addEventListener('input', () => {
             input.classList.remove('is-invalid');
         });
-        
-        // O cuando hace foco en el campo
+
         input.addEventListener('focus', () => {
             input.classList.remove('is-invalid');
         });
-        
+
         input.addEventListener('blur', () => {
-            validarInput(input); 
+            validarInput(input);
         });
     });
-    
-    // Dropdown personalizado
-    const trigger = document.querySelector(".custom-select-trigger");
-    const optionsMenu = document.querySelector(".custom-select-options");
-    const hiddenInput = document.getElementById("tipo-cuenta");
-    const customSelectContainer = document.querySelector('.custom-select-container');
 
-    // Abrir/ocultar al hacer clic en el trigger
-    trigger.addEventListener("click", () => {
-        optionsMenu.style.display = optionsMenu.style.display === "block" ? "none" : "block";
+    // Lógica para Dropdowns Personalizados
+    const selectContainers = document.querySelectorAll('.custom-select-container');
+
+    selectContainers.forEach(container => {
+        const trigger = container.querySelector('.custom-select-trigger');
+        const optionsMenu = container.querySelector('.custom-select-options');
+        const hiddenInput = container.querySelector('input[type="hidden"]');
+        const icon = container.querySelector('.label-with-icon i');
+
+        // Toggle del menú
+        const toggleMenu = (e) => {
+            e.stopPropagation();
+            // Cerrar otros menús abiertos
+            document.querySelectorAll('.custom-select-options').forEach(menu => {
+                if (menu !== optionsMenu) menu.style.display = 'none';
+            });
+
+            optionsMenu.style.display = optionsMenu.style.display === 'block' ? 'none' : 'block';
+        };
+
+        trigger.addEventListener('click', toggleMenu);
+        if (icon) icon.addEventListener('click', toggleMenu);
+
+        // Selección de opción
+        optionsMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                const value = e.target.dataset.value;
+                const text = e.target.textContent;
+
+                trigger.textContent = text;
+                hiddenInput.value = value;
+
+                // Ocultar menú y validar
+                optionsMenu.style.display = 'none';
+                hiddenInput.classList.remove('is-invalid');
+
+                // Disparar evento change manualmente si es necesario
+                const event = new Event('change', { bubbles: true });
+                hiddenInput.dispatchEvent(event);
+            }
+        });
     });
 
-    // Abrir al hacer clic en el <i>
-    const icon = document.querySelector(".label-with-icon i");
-    icon.addEventListener("click", () => {
-        trigger.click();
+    // Cerrar dropdowns al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.custom-select-container')) {
+            document.querySelectorAll('.custom-select-options').forEach(menu => {
+                menu.style.display = 'none';
+            });
+        }
     });
 
-    // Seleccionar opción
-    optionsMenu.addEventListener("click", (e) => {
-        if (e.target.tagName === "LI") {
-            trigger.textContent = e.target.textContent;
-            hiddenInput.value = e.target.dataset.value;
-            optionsMenu.style.display = "none";
-            hiddenInput.classList.remove('is-invalid');
+    // Validación al enviar el formulario
+    form.addEventListener('submit', (e) => {
+        let isFormValid = true;
+
+        // Validar inputs normales
+        inputs.forEach(input => {
+            if (input.type !== 'hidden') {
+                if (!validarInput(input)) {
+                    isFormValid = false;
+                }
+            }
+        });
+
+        // Validar Dropdowns Personalizados
+        selectContainers.forEach(container => {
+            const hiddenInput = container.querySelector('input[type="hidden"]');
+
+            // Si el input hidden está vacío (y asumimos que es requerido por contexto del form)
+            // En este caso, como todos tienen asterisco en el HTML, asumimos requeridos.
+            if (!hiddenInput.value) {
+                hiddenInput.classList.add('is-invalid');
+                isFormValid = false;
+            } else {
+                hiddenInput.classList.remove('is-invalid');
+            }
+        });
+
+        if (!isFormValid) {
+            e.preventDefault();
+            e.stopPropagation();
         }
     });
 
