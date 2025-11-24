@@ -69,8 +69,8 @@
     border: none;
     outline: none;
     box-shadow: none;
-    width: 20rem;
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1rem 0.75rem;
 }
 
 .label-with-icon .bi-caret-down-fill {
@@ -91,13 +91,15 @@
 
 .custom-select-container {
     position: relative;
-    width: 20rem;
+    width: 100%;
 }
 
 .custom-select-trigger {
-    padding: 1rem 2rem;
+    padding: 1rem 0.75rem;
     cursor: pointer;
     font-family: Helvetica;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
 }
 
 .custom-select-options {
