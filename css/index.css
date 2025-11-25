@@ -1,3 +1,234 @@
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    padding: 0.25rem 0.5rem;
+    background: #fff !important;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.5rem;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+/* Logo desktop */
+.navbar-brand-desktop img {
+    width: 60px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Logo móvil */
+.navbar-brand-mobile {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #e4002b !important;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    border: none !important;
+    padding: 0.25rem;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.bi-list {
+    color: #333;
+    font-size: 1.8rem !important;
+}
+
+/* Menú desktop */
+.desktop-menu {
+    display: none;
+    flex-shrink: 0;
+}
+
+.desktop-menu .navbar-nav {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.desktop-menu .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.desktop-menu .nav-link.active {
+    color: #e4002b !important;
+    font-weight: 600;
+}
+
+/* Contenedor iconos derecha */
+.navbar-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.navbar-icons {
+    width: 28px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Dropdown desktop */
+.dropdown-desktop {
+    display: none;
+}
+
+.dropdown-desktop .btn {
+    padding: 0.25rem;
+    border: none !important;
+    background: transparent !important;
+}
+
+.dropdown-desktop .btn img {
+    width: 26px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* Estilos para el dropdown menu en desktop */
+.dropdown-desktop .dropdown-menu {
+    min-width: 220px;
+    padding: 0.5rem 0;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-desktop .dropdown-item {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 1px solid #f8f9fa;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-desktop .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-desktop .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #e4002b;
+}
+
+.dropdown-desktop .dropdown-divider {
+    margin: 0.5rem 0;
+    border-color: #dee2e6;
+}
+
+/* ===== MEDIA QUERIES SOLO PARA NAVBAR ===== */
+
+/* ESCRITORIO (992px +) */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 0.3rem 1rem;
+    }
+    
+    .navbar .container-fluid {
+        padding: 0 1rem;
+    }
+    
+    .navbar-toggler,
+    .navbar-brand-mobile {
+        display: none !important;
+    }
+    
+    .navbar-brand-desktop {
+        display: block !important;
+        margin-right: 2rem;
+    }
+    
+    .desktop-menu {
+        display: flex !important;
+        margin-right: auto;
+    }
+    
+    .dropdown-desktop {
+        display: block !important;
+    }
+    
+    .navbar-icons-container {
+        gap: 1rem;
+    }
+}
+
+/* TABLET (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .navbar-brand-desktop,
+    .desktop-menu,
+    .dropdown-desktop {
+        display: none !important;
+    }
+    
+    .navbar-brand-mobile {
+        font-size: 1.4rem;
+    }
+}
+
+/* MÓVIL (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .navbar-brand-desktop,
+    .desktop-menu,
+    .dropdown-desktop {
+        display: none !important;
+    }
+    
+    .navbar-brand-mobile {
+        font-size: 1.2rem;
+    }
+}
+
+/* -575px) */
+@media (max-width: 575px) {
+    .navbar {
+        padding: 0.2rem 0.3rem;
+    }
+    
+    .navbar-brand-desktop,
+    .desktop-menu,
+    .dropdown-desktop {
+        display: none !important;
+    }
+    
+    .navbar-brand-mobile {
+        font-size: 1.1rem;
+    }
+}
+
+
 h2 {
     font-size: 2rem !important;
 }
