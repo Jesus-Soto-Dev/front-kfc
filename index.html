@@ -479,89 +479,110 @@
                 </div>
 
                 <!-- Formulario método de pago -->
-                <div class="container d-flex flex-column align-items-start ms-auto datos-container">
+                 <div class="container d-flex flex-column align-items-start ms-auto datos-container">
 
-                    <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
+        <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
 
-                    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
+        <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
-                        <!-- Tipo de pago -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="tipo-pago" name="tipo-pago" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Tarjeta</option>
-                                    <option>Transferencia</option>
-                                    <option>PayPal</option>
-                                </select>
-                                <label for="tipo-pago">Método de pago*</label>
-                                <div class="invalid-feedback">Selecciona un método</div>
-                            </div>
-                        </div>
+            <!-- Tipo de pago -->
 
-                        <!-- Nombre titular -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <input type="text" id="titular" name="titular" class="form-control" placeholder=" "
-                                    required>
-                                <label for="titular">Nombre del titular*</label>
-                                <div class="invalid-feedback">Introduce el titular</div>
-                            </div>
-                        </div>
-
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <!-- Mes --> <!-- Año -->
-                            <div class="d-flex gap-3 fecha-group">
-                                <div class="col-4">
-                                    <label for="titular">Fecha de Caducidad*</label>
-                                </div>
-
-                                <div class="form-floating floating-bottom flex-fill col-4">
-                                    <select id="mes" name="mes" class="form-select" required>
-                                        <option value="" disabled selected></option>
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
-                                        <option>04</option>
-                                        <option>05</option>
-                                        <option>06</option>
-                                        <option>07</option>
-                                        <option>08</option>
-                                        <option>09</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                    </select>
-
-                                    <label for="mes">Mes*</label>
-                                    <div class="invalid-feedback">Selecciona un mes</div>
-                                </div>
-
-                                <div class="form-floating floating-bottom flex-fill col-4">
-                                    <select id="anio" name="anio" class="form-select" required>
-                                        <option value="" disabled selected></option>
-                                        <option>2025</option>
-                                        <option>2026</option>
-                                        <option>2027</option>
-                                        <option>2028</option>
-                                    </select>
-                                    <label for="anio">Año*</label>
-                                    <div class="invalid-feedback">Selecciona un año</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- CVV -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
-                                <label for="cvv">CVV*</label>
-                                <div class="invalid-feedback">CVV no válido</div>
-                            </div>
-                        </div>
-
-                    </form>
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Tipo Pago *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
                 </div>
 
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Tarjeta">Tarjeta</li>
+                    <li data-value="Transferencia">Transferencia</li>
+                    <li data-value="PayPal">PayPal</li>
+
+                </ul>
+
+                <input type="hidden" name="tipo-pago" id="tipo-pago">
+                <div class="invalid-feedback">Selecciona un tipo de Pago</div>
+            </div>
+
+            <!-- Nombre titular -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="titular" name="titular" class="form-control" placeholder=" " required>
+                    <label for="titular">Nombre del titular*</label>
+                    <div class="invalid-feedback">Introduce el titular</div>
+                </div>
+            </div>
+
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <!-- Mes --> <!-- Año -->
+                <div class="d-flex gap-3 fecha-group">
+                    <div class="col-4">
+                        <label for="titular">Fecha de Caducidad*</label>
+                    </div>
+
+                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                        <div class="label-with-icon d-flex flex-column align-items-start">
+                            <label class="text-start font-cuenta">Mes *</label>
+                            <i class="bi bi-caret-down-fill label-bi"></i>
+                        </div>
+
+                        <div class="custom-select-trigger"></div>
+                        <ul class="custom-select-options">
+                            <li data-value="01">01</li>
+                            <li data-value="02">02</li>
+                            <li data-value="03">03</li>
+                            <li data-value="04">04</li>
+                            <li data-value="05">05</li>
+                            <li data-value="06">06</li>
+                            <li data-value="07">07</li>
+                            <li data-value="08">08</li>
+                            <li data-value="09">09</li>
+                            <li data-value="10">10</li>
+                            <li data-value="11">11</li>
+                            <li data-value="12">12</li>
+                        </ul>
+
+                        <input type="hidden" name="mes" id="mes">
+                        <div class="invalid-feedback">Selecciona un mes</div>
+                    </div>
+
+                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                        <div class="label-with-icon d-flex flex-column align-items-start">
+                            <label class="text-start font-cuenta">Año *</label>
+                            <i class="bi bi-caret-down-fill label-bi"></i>
+                        </div>
+
+                        <div class="custom-select-trigger"></div>
+                        <ul class="custom-select-options">
+                            <li data-value="2025">2025</li>
+                            <li data-value="2026">2026</li>
+                            <li data-value="2027">2027</li>
+                            <li data-value="2028">2028</li>
+                            <li data-value="2029">2029</li>
+                            <li data-value="2030">2030</li>
+
+
+
+                        </ul>
+
+                        <input type="hidden" name="anio" id="anio">
+                        <div class="invalid-feedback">Selecciona un año</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- CVV -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
+                    <label for="cvv">CVV*</label>
+                    <div class="invalid-feedback">CVV no válido</div>
+                </div>
+            </div>
+
+        </form>
+    </div>
 
                 <!-- Formulario datos bancarios -->
                 <div class="container">

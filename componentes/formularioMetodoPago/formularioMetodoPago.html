@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,77 +11,78 @@
 
     <link rel="stylesheet" href="css/formularioMetodoPago.css">
 </head>
+
 <body>
 
-<div class="container d-flex flex-column align-items-start ms-auto datos-container">
+    <div class="container d-flex flex-column align-items-start ms-auto datos-container">
 
-    <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
+        <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
 
-    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
+        <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
-        <!-- Tipo de pago -->
+            <!-- Tipo de pago -->
 
-        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-            <div class="label-with-icon d-flex flex-column align-items-start">
-                <label class="text-start font-cuenta">Tipo Pago *</label>
-                <i class="bi bi-caret-down-fill label-bi"></i>
-            </div>
-
-            <div class="custom-select-trigger"></div>
-            <ul class="custom-select-options">
-                <li data-value="Tarjeta">Tarjeta</li>
-                <li data-value="Transferencia">Transferencia</li>
-                <li data-value="PayPal">PayPal</li>
-                        
-            </ul>
-
-            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-            <div class="invalid-feedback">Selecciona un tipo de Pago</div>
-        </div>
-
-        <!-- Nombre titular -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="titular" name="titular" class="form-control" placeholder=" " required>
-                <label for="titular">Nombre del titular*</label>
-                <div class="invalid-feedback">Introduce el titular</div>
-            </div>
-        </div>
-
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <!-- Mes --> <!-- Año -->
-            <div class="d-flex gap-3 fecha-group">
-                <div class="col-4">
-                    <label for="titular">Fecha de Caducidad*</label>
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Tipo Pago *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
                 </div>
 
-                <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
-                    <div class="label-with-icon d-flex flex-column align-items-start">
-                        <label class="text-start font-cuenta">Mes *</label>
-                        <i class="bi bi-caret-down-fill label-bi"></i>
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Tarjeta">Tarjeta</li>
+                    <li data-value="Transferencia">Transferencia</li>
+                    <li data-value="PayPal">PayPal</li>
+
+                </ul>
+
+                <input type="hidden" name="tipo-pago" id="tipo-pago">
+                <div class="invalid-feedback">Selecciona un tipo de Pago</div>
+            </div>
+
+            <!-- Nombre titular -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="titular" name="titular" class="form-control" placeholder=" " required>
+                    <label for="titular">Nombre del titular*</label>
+                    <div class="invalid-feedback">Introduce el titular</div>
+                </div>
+            </div>
+
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <!-- Mes --> <!-- Año -->
+                <div class="d-flex gap-3 fecha-group">
+                    <div class="col-4">
+                        <label for="titular">Fecha de Caducidad*</label>
                     </div>
 
-                    <div class="custom-select-trigger"></div>
-                    <ul class="custom-select-options">
-                        <li data-value="01">01</li>
-                        <li data-value="02">02</li>
-                        <li data-value="03">03</li>
-                        <li data-value="04">04</li>
-                        <li data-value="05">05</li>
-                        <li data-value="06">06</li>
-                        <li data-value="07">07</li>
-                        <li data-value="08">08</li>
-                        <li data-value="09">09</li>
-                        <li data-value="10">10</li>
-                        <li data-value="11">11</li>
-                        <li data-value="12">12</li>                        
-                    </ul>
+                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                        <div class="label-with-icon d-flex flex-column align-items-start">
+                            <label class="text-start font-cuenta">Mes *</label>
+                            <i class="bi bi-caret-down-fill label-bi"></i>
+                        </div>
 
-                    <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-                    <div class="invalid-feedback">Selecciona un mes</div>
-                </div>
+                        <div class="custom-select-trigger"></div>
+                        <ul class="custom-select-options">
+                            <li data-value="01">01</li>
+                            <li data-value="02">02</li>
+                            <li data-value="03">03</li>
+                            <li data-value="04">04</li>
+                            <li data-value="05">05</li>
+                            <li data-value="06">06</li>
+                            <li data-value="07">07</li>
+                            <li data-value="08">08</li>
+                            <li data-value="09">09</li>
+                            <li data-value="10">10</li>
+                            <li data-value="11">11</li>
+                            <li data-value="12">12</li>
+                        </ul>
 
-                <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                        <input type="hidden" name="mes" id="mes">
+                        <div class="invalid-feedback">Selecciona un mes</div>
+                    </div>
+
+                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
                         <div class="label-with-icon d-flex flex-column align-items-start">
                             <label class="text-start font-cuenta">Año *</label>
                             <i class="bi bi-caret-down-fill label-bi"></i>
@@ -95,29 +97,30 @@
                             <li data-value="2029">2029</li>
                             <li data-value="2030">2030</li>
 
-                            
-                            
+
+
                         </ul>
 
-                        <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+                        <input type="hidden" name="anio" id="anio">
                         <div class="invalid-feedback">Selecciona un año</div>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
-        <!-- CVV -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
-                <label for="cvv">CVV*</label>
-                <div class="invalid-feedback">CVV no válido</div>
+            <!-- CVV -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
+                    <label for="cvv">CVV*</label>
+                    <div class="invalid-feedback">CVV no válido</div>
+                </div>
             </div>
-        </div>
 
-    </form>
-</div>
+        </form>
+    </div>
 
-<script src="js/formularioMetodoPago.js"></script>
-  
+    <script src="js/formularioMetodoPago.js"></script>
+
 </body>
+
 </html>
