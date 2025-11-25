@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="ProductoPrincipal/productoprincipal.css">
     <link rel="stylesheet" href="formulario-metodo-pago/css/styles.css">
     <link rel="stylesheet" href="ProductosSecundario/css/psecundario.css">
-    <link rel="stylesheet" href="componentes/formularioDireccion/css/formularioDireccion.css">
-    <link rel="stylesheet" href="componentes/formularioMetodoPago/css/formularioMetodoPago.css">
-    <link rel="stylesheet" href="componentes/formularioDatosPersonales/css/formularioDatosPersonales.css">
+    <!--<link rel="stylesheet" href="componentes/formularioDireccion/css/formularioDireccion.css"> -->
+    <!--<link rel="stylesheet" href="componentes/formularioMetodoPago/css/formularioMetodoPago.css"> -->
+    <!--<link rel="stylesheet" href="componentes/formularioDatosPersonales/css/formularioDatosPersonales.css"> -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -113,64 +113,148 @@
                                 </div>
 
                                 <!-- Día -->
-                                <div class="form-floating floating-bottom flex-fill col-3">
-                                    <select id="dia" name="dia" class="form-select" required>
-                                        <option value="" selected></option>
-                                    </select>
-                                    <label for="dia">Día</label>
-                                    <div class="invalid-feedback">Selecciona un día</div>
+                                <div class="col d-flex flex-column flex-fill col-3 custom-select-container">
+                                    <div class="label-with-icon d-flex flex-column align-items-start">
+                                        <label class="text-start font-cuenta">Dia *</label>
+                                        <i class="bi bi-caret-down-fill label-bi"></i>
+                                    </div>
+
+                                    <div class="custom-select-trigger"></div>
+                                    <ul class="custom-select-options">
+                                        <li data-value="01">01</li>
+                                        <li data-value="02">02</li>
+                                        <li data-value="03">03</li>
+                                        <li data-value="04">04</li>
+                                        <li data-value="05">05</li>
+                                        <li data-value="06">06</li>
+                                        <li data-value="07">07</li>
+                                        <li data-value="08">08</li>
+                                        <li data-value="09">09</li>
+                                        <li data-value="10">10</li>
+                                        <li data-value="11">11</li>
+                                        <li data-value="12">12</li>
+                                        <li data-value="13">13</li>
+                                        <li data-value="14">14</li>
+                                        <li data-value="15">15</li>
+                                        <li data-value="16">16</li>
+                                        <li data-value="17">17</li>
+                                        <li data-value="18">18</li>
+                                        <li data-value="19">19</li>
+                                        <li data-value="20">20</li>
+                                        <li data-value="21">21</li>
+                                        <li data-value="22">22</li>
+                                        <li data-value="23">23</li>
+                                        <li data-value="24">24</li>
+                                        <li data-value="25">25</li>
+                                        <li data-value="26">26</li>
+                                        <li data-value="27">27</li>
+                                        <li data-value="28">28</li>
+                                        <li data-value="29">29</li>
+                                        <li data-value="30">30</li>
+                                        <li data-value="31">31</li>
+
+                                    </ul>
+
+                                    <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+                                    <div class="invalid-feedback">Selecciona un dia</div>
                                 </div>
 
                                 <!-- Mes -->
-                                <div class="form-floating floating-bottom flex-fill col-3">
-                                    <select id="mes" name="mes" class="form-select" required>
-                                        <option value="" selected></option>
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
-                                        <option>04</option>
-                                        <option>05</option>
-                                        <option>06</option>
-                                        <option>07</option>
-                                        <option>08</option>
-                                        <option>09</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                    </select>
-                                    <label for="mes">Mes</label>
+                                <div class="col d-flex flex-column flex-fill col-3 custom-select-container">
+                                    <div class="label-with-icon d-flex flex-column align-items-start">
+                                        <label class="text-start font-cuenta">Mes *</label>
+                                        <i class="bi bi-caret-down-fill label-bi"></i>
+                                    </div>
+
+                                    <div class="custom-select-trigger"></div>
+                                    <ul class="custom-select-options">
+                                        <li data-value="01">01</li>
+                                        <li data-value="02">02</li>
+                                        <li data-value="03">03</li>
+                                        <li data-value="04">04</li>
+                                        <li data-value="05">05</li>
+                                        <li data-value="06">06</li>
+                                        <li data-value="07">07</li>
+                                        <li data-value="08">08</li>
+                                        <li data-value="09">09</li>
+                                        <li data-value="10">10</li>
+                                        <li data-value="11">11</li>
+                                        <li data-value="12">12</li>
+                                    </ul>
+
+                                    <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
                                     <div class="invalid-feedback">Selecciona un mes</div>
                                 </div>
-
                                 <!-- Año -->
-                                <div class="form-floating floating-bottom flex-fill col-3">
-                                    <select id="ano" name="ano" class="form-select" required>
-                                        <option value="" selected></option>
-                                    </select>
+                                <div class="col d-flex flex-column flex-fill col-3 custom-select-container">
+                                    <div class="label-with-icon d-flex flex-column align-items-start">
+                                        <label class="text-start font-cuenta">Año *</label>
+                                        <i class="bi bi-caret-down-fill label-bi"></i>
+                                    </div>
 
-                                    <label for="ano">Año</label>
+                                    <div class="custom-select-trigger"></div>
+                                    <ul class="custom-select-options">
+                                        <li data-value="1980">1980</li>
+                                        <li data-value="1981">1981</li>
+                                        <li data-value="1982">1982</li>
+                                        <li data-value="1983">1983</li>
+                                        <li data-value="1984">1984</li>
+                                        <li data-value="1985">1985</li>
+                                        <li data-value="1986">1986</li>
+                                        <li data-value="1987">1987</li>
+                                        <li data-value="1988">1988</li>
+                                        <li data-value="1989">1989</li>
+                                        <li data-value="1990">1990</li>
+                                        <li data-value="1991">1991</li>
+                                        <li data-value="1992">1992</li>
+                                        <li data-value="1993">1993</li>
+                                        <li data-value="1994">1994</li>
+                                        <li data-value="1995">1995</li>
+                                        <li data-value="1996">1996</li>
+                                        <li data-value="1997">1997</li>
+                                        <li data-value="1998">1998</li>
+                                        <li data-value="1999">1999</li>
+                                        <li data-value="2000">2000</li>
+                                        <li data-value="2001">2001</li>
+                                        <li data-value="2002">2002</li>
+                                        <li data-value="2003">2003</li>
+                                        <li data-value="2004">2004</li>
+                                        <li data-value="2005">2005</li>
+                                        <li data-value="2006">2006</li>
+                                        <li data-value="2007">2007</li>
+
+                                    </ul>
+
+                                    <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
                                     <div class="invalid-feedback">Selecciona un año</div>
                                 </div>
-
                             </div>
                         </div>
 
                         <!-- Género -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="genero" name="genero" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Mujer</option>
-                                    <option>Hombre</option>
-                                    <option>No binario</option>
-                                </select>
-                                <label for="genero">Género *</label>
-                                <div class="invalid-feedback">Selecciona tu género</div>
+
+                        <div class="col px-3 px-lg-0">
+                            <div class="custom-select-container">
+                                <div class="label-with-icon d-flex flex-column align-items-start">
+                                    <label class="text-start font-cuenta">Genero *</label>
+                                    <i class="bi bi-caret-down-fill label-bi"></i>
+                                </div>
+
+                                <div class="custom-select-trigger"></div>
+                                <ul class="custom-select-options">
+                                    <li data-value="Hombre">Hombre</li>
+                                    <li data-value="Mujer">Mujer</li>
+                                    <li data-value="No binario">No binario</li>
+
+                                </ul>
+
+                                <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+                                <div class="invalid-feedback">Selecciona un genero</div>
                             </div>
                         </div>
 
                         <!-- Nacionalidad -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
+                        <div class="col-12 d-flex flex-column px-3 px-lg-0">
                             <div class="form-floating floating-bottom">
                                 <input type="text" id="nacionalidad" name="nacionalidad" class="form-control"
                                     placeholder=" " required>
@@ -180,21 +264,29 @@
                         </div>
 
                         <!-- Tipo identificación -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="tipo-id" name="tipo-id" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>DNI</option>
-                                    <option>NIE</option>
-                                    <option>Pasaporte</option>
-                                </select>
-                                <label for="tipo-id">Tipo identificación *</label>
-                                <div class="invalid-feedback">Selecciona un tipo</div>
+
+                        <div class="col-12 px-3 px-lg-0">
+                            <div class="custom-select-container">
+                                <div class="label-with-icon d-flex flex-column align-items-start">
+                                    <label class="text-start font-cuenta">Tipo Identificacion *</label>
+                                    <i class="bi bi-caret-down-fill label-bi"></i>
+                                </div>
+
+                                <div class="custom-select-trigger"></div>
+                                <ul class="custom-select-options">
+                                    <li data-value="DNI">DNI</li>
+                                    <li data-value="NIE">NIE</li>
+                                    <li data-value="Pasaporte">Pasaporte</li>
+
+                                </ul>
+
+                                <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
+                                <div class="invalid-feedback">Selecciona un tipo de documentacion</div>
                             </div>
                         </div>
 
                         <!-- Número identificación -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
+                        <div class="col-12 d-flex flex-column px-3 px-lg-0">
                             <div class="form-floating floating-bottom">
                                 <input type="text" id="num-id" name="num-id" class="form-control" placeholder=" "
                                     required>
@@ -204,23 +296,30 @@
                         </div>
 
                         <!-- Estado civil -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="estado-civil" name="estado-civil" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Soltero/a</option>
-                                    <option>Casado/a</option>
-                                    <option>Divorciado/a</option>
-                                    <option>Viudo/a</option>
-                                </select>
-                                <label for="estado-civil">Estado civil *</label>
+
+                        <div class="col-12 px-3 px-lg-0">
+                            <div class="custom-select-container">
+                                <div class="label-with-icon d-flex flex-column align-items-start">
+                                    <label class="text-start font-cuenta">Estado Civil *</label>
+                                    <i class="bi bi-caret-down-fill label-bi"></i>
+                                </div>
+
+                                <div class="custom-select-trigger"></div>
+                                <ul class="custom-select-options">
+                                    <li data-value="Soltero">Soltero/a</li>
+                                    <li data-value="Casado">Casado/a</li>
+                                    <li data-value="Divorciado">Divorciado/a</li>
+                                    <li data-value="Viudo">Viudo/a</li>
+
+                                </ul>
+
+                                <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
                                 <div class="invalid-feedback">Selecciona tu estado civil</div>
                             </div>
                         </div>
 
                     </form>
                 </div>
-
 
 
                 <!-- Formulario Datos de Contacto -->
@@ -297,27 +396,31 @@
 
                 <!-- Formulario Direccion-->
 
-                <div class="container d-flex flex-column align-items-start ms-auto datos-container direccion-container">
-                    <h2 class="fw-bold text-uppercase title-form text-start">Datos de Dirección</h2>
+                <div class="container d-flex flex-column align-items-start ms-auto datos-container">
+                    <h2 class="text-uppercase title-form text-start">Datos de Dirección</h2>
 
                     <form id="form-direccion" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
                         <!-- Tipo de vía -->
 
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-
-                            <div class="form-floating floating-bottom">
-                                <select id="tipo-via" name="tipo-via" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Calle</option>
-                                    <option>Avenida</option>
-                                    <option>Paseo</option>
-                                    <option>Camino</option>
-                                    <option>Plaza</option>
-                                </select>
-                                <label for="tipo-via">Tipo de vía*</label>
-                                <div class="invalid-feedback">Selecciona el tipo de vía</div>
+                        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                            <div class="label-with-icon d-flex flex-column align-items-start">
+                                <label class="text-start font-cuenta">Tipo Via *</label>
+                                <i class="bi bi-caret-down-fill label-bi"></i>
                             </div>
+
+                            <div class="custom-select-trigger"></div>
+                            <ul class="custom-select-options">
+                                <li data-value="Calle">Calle</li>
+                                <li data-value="Avenida">Avenida</li>
+                                <li data-value="Paseo">Paseo</li>
+                                <li data-value="Camino">Camino</li>
+                                <li data-value="Plaza">Plaza</li>
+
+                            </ul>
+
+                            <input type="hidden" name="tipo-via" id="tipo-via">
+                            <div class="invalid-feedback">Selecciona un tipo de via</div>
                         </div>
 
                         <!-- Vía -->
@@ -359,17 +462,21 @@
                         </div>
 
                         <!-- Tipo de vivienda -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="tipo-vivienda" name="tipo-vivienda" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Chalet</option>
-                                    <option>Piso</option>
-                                    <option>Edificio</option>
-                                </select>
-                                <label for="tipo-vivienda">Tipo de vivienda*</label>
-                                <div class="invalid-feedback">Selecciona el tipo de vivienda</div>
+
+                        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                            <div class="label-with-icon d-flex flex-column align-items-start">
+                                <label class="text-start font-cuenta">Tipo vivienda *</label>
+                                <i class="bi bi-caret-down-fill label-bi"></i>
                             </div>
+
+                            <div class="custom-select-trigger"></div>
+                            <ul class="custom-select-options">
+                                <li data-value="Chalet">Chalet</li>
+                                <li data-value="Piso">Piso</li>
+                            </ul>
+
+                            <input type="hidden" name="tipo-vivienda" id="tipo-vivienda">
+                            <div class="invalid-feedback">Selecciona un tipo de vivienda</div>
                         </div>
 
                         <!-- Código postal -->
@@ -382,17 +489,21 @@
                         </div>
 
                         <!-- Provincia -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="provicia" name="provincia" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>Salamanca</option>
-                                    <option>Soria</option>
-                                    <option>Segovia</option>
-                                </select>
-                                <label for="provincia">Provincia*</label>
-                                <div class="invalid-feedback">Selecciona la provincia</div>
+                        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                            <div class="label-with-icon d-flex flex-column align-items-start">
+                                <label class="text-start font-cuenta">Provincia *</label>
+                                <i class="bi bi-caret-down-fill label-bi"></i>
                             </div>
+
+                            <div class="custom-select-trigger"></div>
+                            <ul class="custom-select-options">
+                                <li data-value="Salamanca">Salamanca</li>
+                                <li data-value="Soria">Soria</li>
+                                <li data-value="Segovia">Segovia</li>
+                            </ul>
+
+                            <input type="hidden" name="provincia" id="provincia">
+                            <div class="invalid-feedback">Selecciona una provincia</div>
                         </div>
 
                         <!-- Localidad -->
@@ -406,21 +517,28 @@
                         </div>
 
                         <!-- País -->
-                        <div class="col d-flex flex-column px-3 px-lg-0">
-                            <div class="form-floating floating-bottom">
-                                <select id="pais" name="pais" class="form-select" required>
-                                    <option value="" selected></option>
-                                    <option>España</option>
-                                    <option>Portugal</option>
-                                    <option>Francia</option>
-                                </select>
-                                <label for="pais">País*</label>
-                                <div class="invalid-feedback">Selecciona un país</div>
+
+                        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                            <div class="label-with-icon d-flex flex-column align-items-start">
+                                <label class="text-start font-cuenta">Pais *</label>
+                                <i class="bi bi-caret-down-fill label-bi"></i>
                             </div>
+
+                            <div class="custom-select-trigger"></div>
+                            <ul class="custom-select-options">
+                                <li data-value="Francia">Francia</li>
+                                <li data-value="España">España</li>
+                                <li data-value="Portugal">Portugal</li>
+                            </ul>
+
+                            <input type="hidden" name="pais" id="pais">
+                            <div class="invalid-feedback">Selecciona un pais</div>
                         </div>
+
 
                     </form>
                 </div>
+
 
                 <!-- Formulario productos principales -->
                 <div class="Producto-principal ">
@@ -479,110 +597,112 @@
                 </div>
 
                 <!-- Formulario método de pago -->
-                 <div class="container d-flex flex-column align-items-start ms-auto datos-container">
+                <div class="container d-flex flex-column align-items-start ms-auto datos-container">
 
-        <h2 class="text-uppercase title-form text-start">Método de Pago</h2>
+                    <h2 class="fw-bold text-uppercase title-form">Método de Pago</h2>
 
-        <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
+                    <form id="form-pago" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
-            <!-- Tipo de pago -->
+                        <!-- Tipo de pago -->
 
-            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-                <div class="label-with-icon d-flex flex-column align-items-start">
-                    <label class="text-start font-cuenta">Tipo Pago *</label>
-                    <i class="bi bi-caret-down-fill label-bi"></i>
-                </div>
+                        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                            <div class="label-with-icon d-flex flex-column align-items-start">
+                                <label class="text-start font-cuenta">Tipo Pago *</label>
+                                <i class="bi bi-caret-down-fill label-bi"></i>
+                            </div>
 
-                <div class="custom-select-trigger"></div>
-                <ul class="custom-select-options">
-                    <li data-value="Tarjeta">Tarjeta</li>
-                    <li data-value="Transferencia">Transferencia</li>
-                    <li data-value="PayPal">PayPal</li>
+                            <div class="custom-select-trigger"></div>
+                            <ul class="custom-select-options">
+                                <li data-value="Tarjeta">Tarjeta</li>
+                                <li data-value="Transferencia">Transferencia</li>
+                                <li data-value="PayPal">PayPal</li>
 
-                </ul>
+                            </ul>
 
-                <input type="hidden" name="tipo-pago" id="tipo-pago">
-                <div class="invalid-feedback">Selecciona un tipo de Pago</div>
-            </div>
-
-            <!-- Nombre titular -->
-            <div class="col d-flex flex-column px-3 px-lg-0">
-                <div class="form-floating floating-bottom">
-                    <input type="text" id="titular" name="titular" class="form-control" placeholder=" " required>
-                    <label for="titular">Nombre del titular*</label>
-                    <div class="invalid-feedback">Introduce el titular</div>
-                </div>
-            </div>
-
-            <div class="col d-flex flex-column px-3 px-lg-0">
-                <!-- Mes --> <!-- Año -->
-                <div class="d-flex gap-3 fecha-group">
-                    <div class="col-4">
-                        <label for="titular">Fecha de Caducidad*</label>
-                    </div>
-
-                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
-                        <div class="label-with-icon d-flex flex-column align-items-start">
-                            <label class="text-start font-cuenta">Mes *</label>
-                            <i class="bi bi-caret-down-fill label-bi"></i>
+                            <input type="hidden" name="tipo-pago" id="tipo-pago">
+                            <div class="invalid-feedback">Selecciona un tipo de Pago</div>
                         </div>
 
-                        <div class="custom-select-trigger"></div>
-                        <ul class="custom-select-options">
-                            <li data-value="01">01</li>
-                            <li data-value="02">02</li>
-                            <li data-value="03">03</li>
-                            <li data-value="04">04</li>
-                            <li data-value="05">05</li>
-                            <li data-value="06">06</li>
-                            <li data-value="07">07</li>
-                            <li data-value="08">08</li>
-                            <li data-value="09">09</li>
-                            <li data-value="10">10</li>
-                            <li data-value="11">11</li>
-                            <li data-value="12">12</li>
-                        </ul>
-
-                        <input type="hidden" name="mes" id="mes">
-                        <div class="invalid-feedback">Selecciona un mes</div>
-                    </div>
-
-                    <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
-                        <div class="label-with-icon d-flex flex-column align-items-start">
-                            <label class="text-start font-cuenta">Año *</label>
-                            <i class="bi bi-caret-down-fill label-bi"></i>
+                        <!-- Nombre titular -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="titular" name="titular" class="form-control" placeholder=" "
+                                    required>
+                                <label for="titular">Nombre del titular*</label>
+                                <div class="invalid-feedback">Introduce el titular</div>
+                            </div>
                         </div>
 
-                        <div class="custom-select-trigger"></div>
-                        <ul class="custom-select-options">
-                            <li data-value="2025">2025</li>
-                            <li data-value="2026">2026</li>
-                            <li data-value="2027">2027</li>
-                            <li data-value="2028">2028</li>
-                            <li data-value="2029">2029</li>
-                            <li data-value="2030">2030</li>
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <!-- Mes --> <!-- Año -->
+                            <div class="d-flex gap-3 fecha-group">
+                                <div class="col-4">
+                                    <label for="titular">Fecha de Caducidad*</label>
+                                </div>
+
+                                <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                                    <div class="label-with-icon d-flex flex-column align-items-start">
+                                        <label class="text-start font-cuenta">Mes *</label>
+                                        <i class="bi bi-caret-down-fill label-bi"></i>
+                                    </div>
+
+                                    <div class="custom-select-trigger"></div>
+                                    <ul class="custom-select-options">
+                                        <li data-value="01">01</li>
+                                        <li data-value="02">02</li>
+                                        <li data-value="03">03</li>
+                                        <li data-value="04">04</li>
+                                        <li data-value="05">05</li>
+                                        <li data-value="06">06</li>
+                                        <li data-value="07">07</li>
+                                        <li data-value="08">08</li>
+                                        <li data-value="09">09</li>
+                                        <li data-value="10">10</li>
+                                        <li data-value="11">11</li>
+                                        <li data-value="12">12</li>
+                                    </ul>
+
+                                    <input type="hidden" name="mes" id="mes">
+                                    <div class="invalid-feedback">Selecciona un mes</div>
+                                </div>
+
+                                <div class="col d-flex flex-column flex-fill col-4 custom-select-container">
+                                    <div class="label-with-icon d-flex flex-column align-items-start">
+                                        <label class="text-start font-cuenta">Año *</label>
+                                        <i class="bi bi-caret-down-fill label-bi"></i>
+                                    </div>
+
+                                    <div class="custom-select-trigger"></div>
+                                    <ul class="custom-select-options">
+                                        <li data-value="2025">2025</li>
+                                        <li data-value="2026">2026</li>
+                                        <li data-value="2027">2027</li>
+                                        <li data-value="2028">2028</li>
+                                        <li data-value="2029">2029</li>
+                                        <li data-value="2030">2030</li>
 
 
 
-                        </ul>
+                                    </ul>
 
-                        <input type="hidden" name="anio" id="anio">
-                        <div class="invalid-feedback">Selecciona un año</div>
-                    </div>
+                                    <input type="hidden" name="anio" id="anio">
+                                    <div class="invalid-feedback">Selecciona un año</div>
+                                </div>
 
+                            </div>
+                        </div>
+                        <!-- CVV -->
+                        <div class="col d-flex flex-column px-3 px-lg-0">
+                            <div class="form-floating floating-bottom">
+                                <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
+                                <label for="cvv">CVV*</label>
+                                <div class="invalid-feedback">CVV no válido</div>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
-            </div>
-            <!-- CVV -->
-            <div class="col d-flex flex-column px-3 px-lg-0">
-                <div class="form-floating floating-bottom">
-                    <input type="text" id="cvv" name="cvv" class="form-control" placeholder=" " required>
-                    <label for="cvv">CVV*</label>
-                    <div class="invalid-feedback">CVV no válido</div>
-                </div>
-            </div>
 
-        </form>
-    </div>
 
                 <!-- Formulario datos bancarios -->
                 <div class="container">
