@@ -10,7 +10,7 @@
 
 .floating-bottom label {
     color: #000;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     transition: .2s ease-in-out;
     font-family: HelveticaCustom, Arial;
 }
@@ -69,8 +69,8 @@
     border: none;
     outline: none;
     box-shadow: none;
-    width: 20rem;
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1rem 0.75rem;
 }
 
 .label-with-icon .bi-caret-down-fill {
@@ -91,20 +91,22 @@
 
 .custom-select-container {
     position: relative;
-    width: 20rem;
+    width: 100%;
 }
 
 .custom-select-trigger {
-    padding: 1rem 2rem;
+    padding: 1rem 0.75rem;
     cursor: pointer;
     font-family: Helvetica;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
 }
 
 .custom-select-options {
     border: solid black 1px;
     display: none;
     position: absolute;
-    width: 8rem;
+    width: 100%;
     background: white;
     list-style: none;
     margin: 0;
@@ -136,6 +138,12 @@
 @media (min-width: 992px) {
     .title-form {
         font-size: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .datos-container {
+        max-width: 900px !important;
     }
 }
 
@@ -177,7 +185,7 @@
 
 .title-form {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: bold;
 }
 

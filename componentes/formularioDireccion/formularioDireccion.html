@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,150 +11,151 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/formularioDireccion.css">
+
 <body>
 
-<div class="container d-flex flex-column align-items-start ms-auto datos-container direccion-container">
-    <h2 class="fw-bold text-uppercase title-form 
-           text-start">Datos de Dirección</h2>
+    <div class="container d-flex flex-column align-items-start ms-auto datos-container">
+        <h2 class="text-uppercase title-form text-start">Datos de Dirección</h2>
 
-    <form id="form-direccion" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
+        <form id="form-direccion" class="row row-cols-1 row-cols-md-2 row-cols-lg-1 row-cols-xl-1 gy-5">
 
-        <!-- Tipo de vía -->
+            <!-- Tipo de vía -->
 
-        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-            <div class="label-with-icon d-flex flex-column align-items-start">
-                <label class="text-start font-cuenta">Tipo Via *</label>
-                <i class="bi bi-caret-down-fill label-bi"></i>
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Tipo Via *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
+                </div>
+
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Calle">Calle</li>
+                    <li data-value="Avenida">Avenida</li>
+                    <li data-value="Paseo">Paseo</li>
+                    <li data-value="Camino">Camino</li>
+                    <li data-value="Plaza">Plaza</li>
+
+                </ul>
+
+                <input type="hidden" name="tipo-via" id="tipo-via">
+                <div class="invalid-feedback">Selecciona un tipo de via</div>
             </div>
 
-            <div class="custom-select-trigger"></div>
-            <ul class="custom-select-options">
-                <li data-value="Calle">Calle</li>
-                <li data-value="Avenida">Avenida</li>
-                <li data-value="Paseo">Paseo</li>
-                <li data-value="Camino">Camino</li>
-                <li data-value="Plaza">Plaza</li>
-
-            </ul>
-
-            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-            <div class="invalid-feedback">Selecciona un tipo de via</div>
-        </div>
-
-        <!-- Vía -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="via" name="via" class="form-control" placeholder=" " required>
-                <label for="via">Vía*</label>
-                <div class="invalid-feedback">Introduce la vía</div>
-            </div>
-        </div>
-
-        <!-- Número -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="numero" name="numero" class="form-control" placeholder=" " required>
-                <label for="numero">Número*</label>
-                <div class="invalid-feedback">Introduce el número</div>
-            </div>
-        </div>
-
-        <!-- Piso -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="piso" name="piso" class="form-control" placeholder=" " required>
-                <label for="piso">Piso*</label>
-                <div class="invalid-feedback">Introduce el Piso</div>
-            </div>
-        </div>
-
-        <!-- Puerta -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" " required>
-                <label for="puerta">Puerta*</label>
-                <div class="invalid-feedback">Introduce la Puerta</div>
-            </div>
-        </div>
-
-        <!-- Tipo de vivienda -->
-        
-        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-        <div class="label-with-icon d-flex flex-column align-items-start">
-            <label class="text-start font-cuenta">Tipo vivienda *</label>
-            <i class="bi bi-caret-down-fill label-bi"></i>
-        </div>
-
-        <div class="custom-select-trigger"></div>
-        <ul class="custom-select-options">
-            <li data-value="Chalet">Chalet</li>
-            <li data-value="Piso">Piso</li>
-        </ul>
-
-        <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-        <div class="invalid-feedback">Selecciona un tipo de vivienda</div>
-        </div>
-
-        <!-- Código postal -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="cp" name="cp" class="form-control" placeholder=" " required>
-                <label for="cp">Código postal*</label>
-                <div class="invalid-feedback">Introduce el código postal</div>
-            </div>
-        </div>
-
-        <!-- Provincia -->
-        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-            <div class="label-with-icon d-flex flex-column align-items-start">
-                <label class="text-start font-cuenta">Provincia *</label>
-                <i class="bi bi-caret-down-fill label-bi"></i>
+            <!-- Vía -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="via" name="via" class="form-control" placeholder=" " required>
+                    <label for="via">Vía*</label>
+                    <div class="invalid-feedback">Introduce la vía</div>
+                </div>
             </div>
 
-            <div class="custom-select-trigger"></div>
-            <ul class="custom-select-options">
-                <li data-value="Salamanca">Salamanca</li>
-                <li data-value="Soria">Soria</li>
-                <li data-value="Segovia">Segovia</li>
-            </ul>
-
-            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-            <div class="invalid-feedback">Selecciona una provincia</div>
-        </div>
-
-        <!-- Localidad -->
-        <div class="col d-flex flex-column px-3 px-lg-0">
-            <div class="form-floating floating-bottom">
-                <input type="text" id="localidad" name="localidad" class="form-control" placeholder=" " required>
-                <label for="localidad">Localidad*</label>
-                <div class="invalid-feedback">Introduce la localidad</div>
-            </div>
-        </div>
-
-        <!-- País -->
-
-        <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
-            <div class="label-with-icon d-flex flex-column align-items-start">
-                <label class="text-start font-cuenta">Pais *</label>
-                <i class="bi bi-caret-down-fill label-bi"></i>
+            <!-- Número -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="numero" name="numero" class="form-control" placeholder=" " required>
+                    <label for="numero">Número*</label>
+                    <div class="invalid-feedback">Introduce el número</div>
+                </div>
             </div>
 
-            <div class="custom-select-trigger"></div>
-            <ul class="custom-select-options">
-                <li data-value="Francia">Francia</li>
-                <li data-value="España">España</li>
-                <li data-value="Portugal">Portugal</li>
-            </ul>
+            <!-- Piso -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="piso" name="piso" class="form-control" placeholder=" " required>
+                    <label for="piso">Piso*</label>
+                    <div class="invalid-feedback">Introduce el Piso</div>
+                </div>
+            </div>
 
-            <input type="hidden" name="tipo-cuenta" id="tipo-cuenta">
-            <div class="invalid-feedback">Selecciona un pais</div>
-        </div>
+            <!-- Puerta -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="puerta" name="puerta" class="form-control" placeholder=" " required>
+                    <label for="puerta">Puerta*</label>
+                    <div class="invalid-feedback">Introduce la Puerta</div>
+                </div>
+            </div>
 
-        
-    </form>
-</div>
+            <!-- Tipo de vivienda -->
 
-<script src="js/formularioDireccion.js"></script>
-  
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Tipo vivienda *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
+                </div>
+
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Chalet">Chalet</li>
+                    <li data-value="Piso">Piso</li>
+                </ul>
+
+                <input type="hidden" name="tipo-vivienda" id="tipo-vivienda">
+                <div class="invalid-feedback">Selecciona un tipo de vivienda</div>
+            </div>
+
+            <!-- Código postal -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="cp" name="cp" class="form-control" placeholder=" " required>
+                    <label for="cp">Código postal*</label>
+                    <div class="invalid-feedback">Introduce el código postal</div>
+                </div>
+            </div>
+
+            <!-- Provincia -->
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Provincia *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
+                </div>
+
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Salamanca">Salamanca</li>
+                    <li data-value="Soria">Soria</li>
+                    <li data-value="Segovia">Segovia</li>
+                </ul>
+
+                <input type="hidden" name="provincia" id="provincia">
+                <div class="invalid-feedback">Selecciona una provincia</div>
+            </div>
+
+            <!-- Localidad -->
+            <div class="col d-flex flex-column px-3 px-lg-0">
+                <div class="form-floating floating-bottom">
+                    <input type="text" id="localidad" name="localidad" class="form-control" placeholder=" " required>
+                    <label for="localidad">Localidad*</label>
+                    <div class="invalid-feedback">Introduce la localidad</div>
+                </div>
+            </div>
+
+            <!-- País -->
+
+            <div class="col d-flex flex-column px-3 px-lg-0 custom-select-container">
+                <div class="label-with-icon d-flex flex-column align-items-start">
+                    <label class="text-start font-cuenta">Pais *</label>
+                    <i class="bi bi-caret-down-fill label-bi"></i>
+                </div>
+
+                <div class="custom-select-trigger"></div>
+                <ul class="custom-select-options">
+                    <li data-value="Francia">Francia</li>
+                    <li data-value="España">España</li>
+                    <li data-value="Portugal">Portugal</li>
+                </ul>
+
+                <input type="hidden" name="pais" id="pais">
+                <div class="invalid-feedback">Selecciona un pais</div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="js/formularioDireccion.js"></script>
+
 </body>
+
 </html>
