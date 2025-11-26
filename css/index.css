@@ -252,15 +252,16 @@ h2 {
         content: "";
         position: fixed;
         top: 0;
-        left: 5vw;          /* margen a la izquierda */
-        width: 40vw;        /* Más pequeño que la mitad */
+        left: 0;
+        width: 50vw;
         height: 100vh;
         background-image: url('../img/signin.jpg');
-        background-size: cover;
-        background-position: center;
+        background-size: contain;     /* que se vea completa */
+        background-position: top center;  /* aparece desde arriba */
         background-repeat: no-repeat;
-        z-index: -1;        /* detrás del contenido */
+        z-index: -1;
     }
+
 }
 
 /*Estilos para fomrularios*/
