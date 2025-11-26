@@ -232,3 +232,17 @@ body {
 h2 {
     font-size: 2rem !important;
 }
+
+/*Estilos para fomrularios*/
+
+/* SOLUCIÓN COMPATIBLE PARA TODOS LOS NAVEGADORES */
+.custom-select-container {
+    position: relative !important;
+}
+
+/* Para los dropdowns que no tienen custom-select-container */
+.datos-container .col.d-flex.flex-column,
+.container-fluid .col.d-flex.flex-column, 
+.container .col.d-flex.flex-column {
+    position: relative !important;
+}
