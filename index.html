@@ -20,77 +20,83 @@
 
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
 
-            <!-- MENÚ HAMBURGUESA (solo móvil/tablet) -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="bi bi-list" style="font-size: 2rem;"></i>
-            </button>
+                <!-- MENÚ HAMBURGUESA (solo móvil/tablet) -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list" style="font-size: 2rem;"></i>
+                </button>
 
-            <!-- LOGO DESKTOP (solo 992px+) -->
-            <a class="navbar-brand navbar-brand-desktop" href="#">
-                <img src="img/kfc-logo.svg" alt="KFC Logo">
-            </a>
+                <!-- LOGO DESKTOP (solo 992px+) -->
+                <a class="navbar-brand navbar-brand-desktop" href="#">
+                    <img src="img/kfc-logo.svg" alt="KFC Logo">
+                </a>
 
-            <!-- LOGO MÓVIL "KFC" centrado (solo menor a 992px) -->
-            <a class="navbar-brand navbar-brand-mobile mx-auto" href="#">
-                KFC
-            </a>
+                <!-- LOGO MÓVIL "KFC" centrado (solo menor a 992px) -->
+                <a class="navbar-brand navbar-brand-mobile mx-auto" href="#">
+                    KFC
+                </a>
 
-            <!-- MENÚ DESKTOP pegado a la izquierda (solo 992px+) -->
-            <div class="desktop-menu">
-                <ul class="navbar-nav">
+                <!-- MENÚ DESKTOP pegado a la izquierda (solo 992px+) -->
+                <div class="desktop-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#">Nuestra carta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Cupones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Encuentra tu KFC</a></li>
+                    </ul>
+                </div>
+
+                <!-- ICONOS DERECHA (siempre visibles) -->
+                <div class="d-flex align-items-center gap-2 ms-auto navbar-icons-container">
+                    <!-- Icono usuario -->
+                    <img src="img/preLogin-icon.svg" alt="Usuario" class="navbar-icons">
+
+                    <!-- Bucket -->
+                    <img src="img/sprite_bucket.png" alt="Carrito" class="navbar-icons">
+
+                    <!-- Dropdown menú (solo desktop) - CON TODAS LAS OPCIONES -->
+                    <div class="dropdown dropdown-desktop">
+                        <button class="btn btn-light border-0 p-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="img/hamburger-menu-svgrepo-com.svg" alt="Menú" width="40" height="32">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Nuestra carta</a></li>
+                            <li><a class="dropdown-item" href="#">Cupones</a></li>
+                            <li><a class="dropdown-item" href="#">Encuentra tu KFC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Promociones</a></li>
+                            <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MENÚ COLAPSABLE MÓVIL (solo menor a 992px) -->
+            <div class="collapse mobile-menu-collapse" id="mobileMenu">
+                <ul class="navbar-nav w-100 px-3">
                     <li class="nav-item"><a class="nav-link active" href="#">Nuestra carta</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Cupones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Encuentra tu KFC</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cerrar sesión</a></li>
                 </ul>
             </div>
-
-            <!-- ICONOS DERECHA (siempre visibles) -->
-            <div class="d-flex align-items-center gap-2 ms-auto navbar-icons-container">
-                <!-- Icono usuario -->
-                <img src="img/preLogin-icon.svg" alt="Usuario" class="navbar-icons">
-
-                <!-- Bucket -->
-                <img src="img/sprite_bucket.png" alt="Carrito" class="navbar-icons">
-
-                <!-- Dropdown menú (solo desktop) - CON TODAS LAS OPCIONES -->
-                <div class="dropdown dropdown-desktop">
-                    <button class="btn btn-light border-0 p-0" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="img/hamburger-menu-svgrepo-com.svg" alt="Menú" width="40" height="32">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Nuestra carta</a></li>
-                        <li><a class="dropdown-item" href="#">Cupones</a></li>
-                        <li><a class="dropdown-item" href="#">Encuentra tu KFC</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Promociones</a></li>
-                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- MENÚ COLAPSABLE MÓVIL (solo menor a 992px) -->
-        <div class="collapse mobile-menu-collapse" id="mobileMenu">
-            <ul class="navbar-nav w-100 px-3">
-                <li class="nav-item"><a class="nav-link active" href="#">Nuestra carta</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Cupones</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Encuentra tu KFC</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li class="nav-item"><a class="nav-link" href="#">Promociones</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Cerrar sesión</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <div class="container">

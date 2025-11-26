@@ -233,6 +233,36 @@ h2 {
     font-size: 2rem !important;
 }
 
+/* ===== SECCIÓN KFC IMAGE ===== */
+/* Oculto en mobile  */
+.kfc-image {
+    display: none;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .kfc-image {
+        display: block;
+        position: relative;
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    .kfc-image::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 5vw;          /* margen a la izquierda */
+        width: 40vw;        /* Más pequeño que la mitad */
+        height: 100vh;
+        background-image: url('../img/signin.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;        /* detrás del contenido */
+    }
+}
+
 /*Estilos para fomrularios*/
 
 /* SOLUCIÓN COMPATIBLE PARA TODOS LOS NAVEGADORES */
@@ -245,4 +275,115 @@ h2 {
 .container-fluid .col.d-flex.flex-column, 
 .container .col.d-flex.flex-column {
     position: relative !important;
+}
+
+/* ===== HOMOGENEIZACIÓN DE FORMULARIOS ===== */
+
+/* CONTENEDOR PRINCIPAL DE FORMULARIOS */
+.forms {
+    padding: 2rem 1rem;
+}
+
+/* ESPACIADO ENTRE FORMULARIOS */
+.forms > div {
+    margin-bottom: 4rem !important;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.forms > div:last-child {
+    border-bottom: none;
+}
+
+/* TÍTULOS CONSISTENTES */
+.title-form {
+    color: #333;
+    margin-bottom: 2.5rem !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    border-bottom: 3px solid #e4002b;
+    padding-bottom: 0.75rem;
+    width: 100%;
+}
+
+/* LABELS EN NEGRITA Y CONSISTENTES */
+.forms label,
+.forms .form-floating > label,
+.forms .label-with-icon label,
+.forms .label-group {
+    font-weight: 700 !important;
+    color: #333 !important;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* INPUTS CONSISTENTES */
+.forms .form-control {
+    width: 100% !important;
+    border: none !important;
+    border-bottom: 2px solid #ddd !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 0 !important;
+    font-size: 1rem;
+    background: transparent !important;
+    transition: border-color 0.3s ease;
+}
+
+.forms .form-control:focus {
+    border-bottom-color: #e4002b !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* DROPDOWNS CONSISTENTES */
+.custom-select-container {
+    position: relative !important;
+    margin-bottom: 1.5rem;
+}
+
+.forms .label-with-icon {
+    margin-bottom: 0.5rem;
+}
+
+.forms .label-bi {
+    color: #666;
+}
+
+/* GRUPOS DE FECHA CONSISTENTES */
+.forms .fecha-group {
+    margin-bottom: 1.5rem;
+}
+
+.forms .fecha-group .label-group {
+    margin-bottom: 1rem;
+}
+
+/* VALIDACIONES */
+.is-valid {
+    border-bottom-color: #28a745 !important;
+}
+
+.is-invalid {
+    border-bottom-color: #e4002b !important;
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* PRODUCTOS */
+.Producto-principal {
+    margin-top: 1rem;
+}
+
+.Producto-principal .card {
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.Producto-principal .card:hover {
+    border-color: #e4002b;
 }
