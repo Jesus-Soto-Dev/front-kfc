@@ -2,12 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    console.log("🔧 SOLUCIÓN COMPLETA CON TEXTO");
-
     // 1. ELIMINAR LOS TRIGGERS PROBLEMÁTICOS
     function eliminarTriggersConflictivos() {
         const triggers = document.querySelectorAll(".custom-select-trigger");
-        console.log(`🗑️ Eliminando ${triggers.length} triggers conflictivos`);
+
         triggers.forEach((trigger) => trigger.remove());
     }
 
@@ -16,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const iconos = document.querySelectorAll(
             ".label-with-icon i.bi-caret-down-fill"
         );
-        console.log(`🎯 Configurando ${iconos.length} dropdowns`);
+ 
 
         iconos.forEach((icono, index) => {
             const container =
@@ -105,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            console.log(`✓ Dropdown ${index + 1} configurado`);
         });
 
         // Cerrar menús al hacer click fuera
@@ -152,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("form").forEach((form, index) => {
             form.addEventListener("submit", function (e) {
                 let esValido = true;
-                console.log(`📝 Validando formulario ${index + 1}`);
 
                 // Validar inputs
                 const inputs = this.querySelectorAll(
@@ -162,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (input.hasAttribute("required") && !input.value.trim()) {
                         input.classList.add("is-invalid");
                         esValido = false;
-                        console.log(`❌ Input vacío: ${input.name || input.id}`);
                     }
                 });
 
@@ -174,18 +169,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (hiddenInput && !hiddenInput.value) {
                         container.classList.add("is-invalid");
                         esValido = false;
-                        console.log(
-                            `❌ Dropdown sin selección: ${hiddenInput.name || hiddenInput.id}`
-                        );
                     }
                 });
 
                 if (!esValido) {
                     e.preventDefault();
-                    console.log(`🚫 Formulario ${index + 1} bloqueado por errores`);
-                } else {
-                    console.log(`✅ Formulario ${index + 1} válido`);
-                }
+                } 
             });
         });
     }
@@ -196,5 +185,4 @@ document.addEventListener("DOMContentLoaded", function () {
     configurarValidacionInputs();
     configurarValidacionFormularios();
 
-    console.log("🎉 SISTEMA COMPLETO CONFIGURADO - TEXTO EN NEGRITA");
 });
