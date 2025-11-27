@@ -29,15 +29,21 @@
 }
 
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    padding-top: 90px;
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
-    min-height: 60px;
+    min-height: 90px;
     padding: 0.25rem 0.5rem;
     background: #fff !important;
     border-bottom: 1px solid #dee2e6;
@@ -53,6 +59,11 @@ body {
     flex-wrap: nowrap;
 }
 
+.navbar-logo{
+    display:flex;
+    justify-content:right;
+}
+
 .navbar-brand-desktop img {
     width: 60px;
     height: 48px;
@@ -61,6 +72,8 @@ body {
 }
 
 .navbar-brand-mobile {
+    height: 35px;
+    width: auto;
     font-size: 1.3rem;
     font-weight: 800;
     color: #e4002b !important;
@@ -119,12 +132,12 @@ body {
     align-items: center;
     gap: 0.75rem;
     flex-shrink: 0;
-    margin-left: auto;
+    margin-left: 0px;
 }
 
 .navbar-icons {
-    width: 28px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -150,6 +163,7 @@ body {
     padding: 0.5rem 0;
     border: 1px solid #dee2e6;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
 }
 
 .dropdown-desktop .dropdown-item {
@@ -177,7 +191,7 @@ body {
 
 /* ===== SECCIÓN KFC IMAGE ===== */
 .kfc-image {
-    display: none;
+    display: none
 }
 
 @media (min-width: 992px) {
@@ -191,7 +205,7 @@ body {
     .kfc-image::before {
         content: "";
         position: fixed;
-        top: 0;
+        top: 90px;
         left: 0;
         width: 50vw;
         height: 100vh;
@@ -215,7 +229,6 @@ body {
 .form-section {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #e9ecef;
 }
 
 .form-section:last-of-type {
@@ -225,7 +238,7 @@ body {
 
 /* TÍTULOS CON HELVETICA */
 .section-title {
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 1.8rem !important;
     font-weight: 700 !important;
     color: #333;
@@ -249,11 +262,8 @@ body {
 .form-group label,
 .select-label label,
 .group-label {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 700 !important;
     color: #333 !important;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
     display: block;
 }
 
@@ -267,7 +277,6 @@ body {
     font-size: 1rem;
     background: transparent !important;
     transition: border-color 0.3s ease;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .form-control:focus {
@@ -293,7 +302,6 @@ body {
     transition: opacity .1s ease-in-out, transform .1s ease-in-out;
     color: #666;
     font-weight: 400 !important;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .form-floating>.form-control:focus~label,
@@ -324,10 +332,10 @@ body {
 }
 
 .dropdown-icon {
-    color: #666;
+    color: #000000;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-left: 0.5rem;
+    margin-top: 0px;
 }
 
 .dropdown-icon:hover {
@@ -336,10 +344,11 @@ body {
 
 .custom-select-options {
     position: absolute;
+    border-radius: 10px;
     top: 100%;
     left: 0;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-top: none;
     max-height: 200px;
     overflow-y: auto;
@@ -348,7 +357,6 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     min-width: 120px;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -362,16 +370,15 @@ body {
 .custom-select-options li {
     padding: 0.75rem 1rem;
     cursor: pointer;
-    border-bottom: none !important; 
+    border-bottom: none !important;
     transition: background-color 0.2s ease;
-    font-family: 'Helvetica', sans-serif;
     font-size: 0.9rem;
 }
 
 .custom-select-options li:hover {
     background-color: #f8f9fa;
-    color: #e4002b;
 }
+
 .custom-select-options li:last-child {
     border-bottom: none;
 }
@@ -384,7 +391,6 @@ body {
     font-weight: 700;
     min-height: 1.5rem;
     padding: 0.5rem 0;
-    font-family: 'Helvetica', sans-serif;
 }
 
 /* GRUPOS DE FECHA COMPACTOS  */
@@ -424,16 +430,9 @@ body {
     padding: 1.5rem;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
     color: white;
-    font-weight: 600;
-    font-family: 'Helvetica', sans-serif;
 }
 
-.producto-card-separado:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
 .producto-card-separado.selected {
     background: white;
@@ -443,8 +442,6 @@ body {
 
 .card-content {
     font-size: 1.1rem;
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 600;
 }
 
 /* BOTÓN ENVIAR */
@@ -460,16 +457,15 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Helvetica', sans-serif;
     letter-spacing: 0.5px;
+    
 }
 
 .btn-enviar:hover {
-    background: #c10022;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(225, 0, 34, 0.3);
-}
+    background: #d1002d; /* Este cambio en el hover no está en tu CSS */
+    color: white;
 
+}
 /* MENSAJES DE ERROR */
 .error-message {
     color: #e4002b;
@@ -477,7 +473,6 @@ body {
     font-weight: 600;
     margin-top: 0.5rem;
     display: none;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .invalid-feedback {
@@ -486,7 +481,6 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     margin-top: 0.5rem;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .is-invalid .invalid-feedback {
@@ -617,6 +611,8 @@ body {
     }
 
     .navbar-brand-mobile {
+        height: 40px;
+        width: auto;
         font-size: 1.4rem;
     }
 }
@@ -630,6 +626,8 @@ body {
     }
 
     .navbar-brand-mobile {
+        height: 40px;
+        width: auto;
         font-size: 1.2rem;
     }
 }
@@ -675,8 +673,6 @@ body {
 }
 
 .fecha-label-inline {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 700 !important;
     color: #333 !important;
     font-size: 0.95rem;
     margin-bottom: 0;
@@ -746,19 +742,17 @@ body {
     background: #e4002b !important;
     /* Poner fondo rojo en CADA card individual */
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 1.5rem;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
     color: white;
-    font-weight: 600;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .producto-card-separado:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #e4002b;
+    background: white !important;
+    border-color: #e4002b;
 }
 
 .producto-card-separado.selected {
@@ -784,9 +778,11 @@ body {
 
     .productos-grid-separado .producto-card-separado:last-child:nth-child(3n) {
         grid-column: 1 / -1;
-        justify-self: center; /* Centrado */
-        width: calc(50% - 1rem); /* MISMO ancho que los otros */
-        max-width: none;    
+        justify-self: center;
+        /* Centrado */
+        width: calc(50% - 1rem);
+        /* MISMO ancho que los otros */
+        max-width: none;
     }
 
 }
@@ -809,10 +805,9 @@ body {
     }
 
     .card-content {
-        font-size: 0.95rem !important;
-        /* Texto más pequeño */
-        font-weight: 600;
+        font-size: 1.5rem !important;
         line-height: 1.2;
         padding: 0 0.25rem;
+        font-weight: lighter;
     }
 }
