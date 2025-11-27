@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const label = container?.querySelector(".label-with-icon label");
 
             if (!menu || !label) {
-                console.log(`❌ Dropdown ${index + 1} sin menú o label`);
+                
                 return;
             }
 
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
 
                     menu.style.display = "none";
-                    console.log(`✅ Seleccionado: ${texto}`);
+                    
                 }
             });
 
