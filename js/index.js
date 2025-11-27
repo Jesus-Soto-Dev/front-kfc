@@ -1,4 +1,3 @@
-// solución-completa-con-texto.js
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const iconos = document.querySelectorAll(
             ".label-with-icon i.bi-caret-down-fill"
         );
- 
 
         iconos.forEach((icono, index) => {
             const container =
@@ -174,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (!esValido) {
                     e.preventDefault();
-                } 
+                }
             });
         });
     }
